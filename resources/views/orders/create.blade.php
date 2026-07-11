@@ -44,7 +44,7 @@
 
                 @endif
 
-                <form action="{{ route('orders.store',$product) }}" method="POST">
+                <form action="{{ route('admin.orders.store',$product) }}" method="POST">
 
                     @csrf
 

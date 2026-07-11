@@ -22,7 +22,7 @@
 
         </div>
 
-        <a href="{{ route('orders.index') }}"
+        <a href="{{ route('admin.orders.index') }}"
            class="bg-gray-800 text-white px-6 py-3 rounded-xl">
 
             Zurück
@@ -98,7 +98,7 @@
             </div>
 
             <form
-                action="{{ route('orders.update',$order) }}"
+                action="{{ route('admin.orders.update',$order) }}"
                 method="POST"
                 class="mt-8">
 

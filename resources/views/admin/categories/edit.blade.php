@@ -12,7 +12,7 @@
 
         </h1>
 
-        <a href="{{ route('categories.index') }}"
+        <a href="{{ route('admin.categories.index') }}"
            class="bg-gray-800 text-white px-6 py-3 rounded-xl">
 
             Zurück
@@ -40,7 +40,7 @@
     @endif
 
     <form method="POST"
-          action="{{ route('categories.update',$category) }}">
+          action="{{ route('admin.categories.update',$category) }}">
 
         @csrf
 

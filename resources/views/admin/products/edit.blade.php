@@ -18,7 +18,7 @@
 
         </div>
 
-        <a href="{{ route('products.index') }}"
+        <a href="{{ route('admin.products.index') }}"
            class="bg-gray-800 text-white px-6 py-3 rounded-xl hover:bg-black transition">
 
             Zurück
@@ -45,7 +45,7 @@
 
     @endif
 
-    <form action="{{ route('products.update', $product) }}"
+    <form action="{{ route('admin.products.update', $product) }}"
           method="POST"
           enctype="multipart/form-data"
           class="bg-white rounded-3xl shadow-xl p-10">
@@ -208,7 +208,7 @@
 
             </button>
 
-            <a href="{{ route('products.index') }}"
+            <a href="{{ route('admin.products.index') }}"
                class="bg-gray-200 hover:bg-gray-300 transition px-10 py-4 rounded-xl">
 
                 Abbrechen

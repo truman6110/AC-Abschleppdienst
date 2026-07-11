@@ -56,7 +56,7 @@ class OrderController extends Controller
         Order::create($validated);
 
         return redirect()
-    ->route('orders.success')
+    ->route('admin.orders.success')
     ->with([
         'order_number' => $validated['order_number'],
         'success' => 'Ihre Bestellung wurde erfolgreich gesendet.'

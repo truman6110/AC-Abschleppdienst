@@ -16,7 +16,7 @@
 
     </div>
 
-    <a href="{{ route('categories.create') }}"
+    <a href="{{ route('admin.categories.create') }}"
        class="bg-yellow-400 hover:bg-yellow-500 px-6 py-3 rounded-xl font-bold">
 
         + Neue Kategorie
@@ -99,14 +99,14 @@
 
                             <div class="flex justify-center items-center gap-4">
 
-                                <a href="{{ route('categories.edit', $category) }}"
+                                <a href="{{ route('admin.categories.edit', $category) }}"
                                 class="text-blue-600 hover:text-blue-800 font-semibold">
 
                                     Bearbeiten
 
                                 </a>
 
-                                <form action="{{ route('categories.destroy', $category) }}"
+                                <form action="{{ route('admin.categories.destroy', $category) }}"
                                     method="POST"
                                     onsubmit="return confirm('Möchten Sie diese Kategorie wirklich löschen?');">
 

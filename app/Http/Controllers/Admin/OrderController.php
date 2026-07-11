@@ -26,7 +26,7 @@ class OrderController extends Controller
 
     public function edit(Order $order)
     {
-        return redirect()->route('orders.show', $order);
+        return redirect()->route('admin.orders.show', $order);
     }
 
     public function update(Request $request, Order $order)
@@ -51,7 +51,7 @@ class OrderController extends Controller
         $order->delete();
 
         return redirect()
-            ->route('orders.index')
+            ->route('admin.orders.index')
             ->with('success', 'Bestellung gelöscht.');
     }
 }

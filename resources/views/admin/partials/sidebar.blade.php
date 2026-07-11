@@ -19,21 +19,21 @@
 
             </a>
 
-            <a href="{{ route('categories.index') }}"
+            <a href="{{ route('admin.categories.index') }}"
             class="block px-8 py-4 hover:bg-gray-800 transition">
 
                 📂 Kategorien
 
             </a>
 
-            <a href="{{ route('products.index') }}"
+            <a href="{{ route('admin.products.index') }}"
             class="block px-8 py-4 hover:bg-gray-800 transition">
 
                 🚛 Produkte
 
             </a>
 
-            <a href="{{ route('quotes.index') }}"
+            <a href="{{ route('admin.quotes.index') }}"
             class="block px-8 py-4 hover:bg-gray-800 transition">
 
                 📩 Angebote

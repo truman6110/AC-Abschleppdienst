@@ -16,7 +16,7 @@
 
     </div>
 
-    <a href="{{ route('products.create') }}"
+    <a href="{{ route('admin.products.create') }}"
        class="bg-yellow-400 hover:bg-yellow-500 px-6 py-3 rounded-xl font-bold">
 
         + Neues Produkt
@@ -135,14 +135,14 @@
 
                     <div class="flex justify-center items-center gap-4">
 
-                        <a href="{{ route('products.edit', $product) }}"
+                        <a href="{{ route('admin.products.edit', $product) }}"
                            class="text-blue-600 hover:text-blue-800 font-semibold">
 
                             Bearbeiten
 
                         </a>
 
-                        <form action="{{ route('products.destroy', $product) }}"
+                        <form action="{{ route('admin.products.destroy', $product) }}"
                               method="POST"
                               onsubmit="return confirm('Möchten Sie dieses Produkt wirklich löschen?');">
 

@@ -136,7 +136,7 @@
 
                 <div class="flex flex-wrap gap-5 mt-12">
 
-                    <a href="{{ route('orders.create',$product) }}"
+                    <a href="{{ route('admin.orders.create',$product) }}"
                        class="bg-yellow-400 hover:bg-yellow-500 transition px-8 py-4 rounded-xl font-bold">
 
                         Jetzt bestellen

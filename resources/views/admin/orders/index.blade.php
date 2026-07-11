@@ -134,14 +134,14 @@
 
                     <div class="flex justify-center gap-4">
 
-                        <a href="{{ route('orders.show',$order) }}"
+                        <a href="{{ route('admin.orders.show',$order) }}"
                            class="text-blue-600 hover:text-blue-800">
 
                             Anzeigen
 
                         </a>
 
-                        <form action="{{ route('orders.destroy',$order) }}"
+                        <form action="{{ route('admin.orders.destroy',$order) }}"
                               method="POST"
                               onsubmit="return confirm('Bestellung löschen?')">
 
