@@ -27,17 +27,20 @@ Route::view('/kontakt', 'contact.index')->name('contact');
 
 Route::view('/ueber-uns', 'about.index')->name('about');
 
-Route::middleware(['auth'])->prefix('admin')->group(function () {
+Route::middleware(['auth'])
+    ->prefix('admin')
+    ->name('admin.')
+    ->group(function () {
 
-    Route::get('/', DashboardController::class)->name('admin.dashboard');
+        Route::get('/', DashboardController::class)->name('dashboard');
 
-    Route::resource('categories', CategoryController::class);
+        Route::resource('categories', CategoryController::class);
 
-    Route::resource('products', ProductController::class);
+        Route::resource('products', ProductController::class);
 
-    Route::resource('orders', \App\Http\Controllers\Admin\OrderController::class);
+        Route::resource('orders', \App\Http\Controllers\Admin\OrderController::class);
 
-    Route::resource('quotes', QuoteRequestController::class);
+        Route::resource('quotes', QuoteRequestController::class);
 
 });
 Route::view('/bestellung-erfolgreich', 'orders.success')
