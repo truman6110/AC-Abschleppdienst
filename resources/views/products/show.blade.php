@@ -2,151 +2,276 @@
 
 @section('content')
 
-<section class="py-20 bg-gray-100">
+<section class="bg-[#f8fafc] py-24">
 
     <div class="max-w-7xl mx-auto px-6">
 
-        <div class="grid lg:grid-cols-2 gap-16">
+        <div class="grid lg:grid-cols-2 gap-20 items-start">
 
-            <!-- Images -->
+            {{-- Galerie --}}
 
-            <!-- Images -->
+            <div class="lg:sticky lg:top-28">
 
-<div>
+                @php
+                    $cover = $product->images->where('is_cover', true)->first()
+                             ?? $product->images->first();
+                @endphp
 
-    @php
-        $cover = $product->images->where('is_cover', true)->first() ?? $product->images->first();
-    @endphp
+                @if($cover)
 
-    @if($cover)
+                    <div class="bg-white rounded-[28px] overflow-hidden shadow-xl">
 
-        <img
-            id="main-image"
-            src="{{ asset('storage/'.$cover->image) }}"
-            class="w-full rounded-3xl shadow-xl object-cover h-[550px]"
-            alt="{{ $product->name }}">
+                        <img
+                            id="main-image"
+                            src="{{ asset('storage/'.$cover->image) }}"
+                            class="w-full h-[560px] object-cover"
+                            alt="{{ $product->name }}">
 
-    @else
+                    </div>
 
-        <div class="w-full h-[550px] rounded-3xl bg-gray-200 flex items-center justify-center">
+                @else
 
-            Kein Bild
+                    <div class="bg-gray-200 rounded-[28px] h-[560px] flex items-center justify-center">
 
-        </div>
+                        Kein Bild
 
-    @endif
+                    </div>
 
-    <div class="grid grid-cols-4 gap-4 mt-6">
+                @endif
 
-        @foreach($product->images as $image)
+                <div class="grid grid-cols-4 gap-4 mt-5">
 
-            <img
-                src="{{ asset('storage/'.$image->image) }}"
-                class="rounded-xl cursor-pointer hover:opacity-80 transition h-24 object-cover thumbnail"
-                onclick="document.getElementById('main-image').src=this.src">
+                    @foreach($product->images as $image)
 
-        @endforeach
+                        <img
+                            src="{{ asset('storage/'.$image->image) }}"
+                            onclick="document.getElementById('main-image').src=this.src"
+                         class="thumbnail cursor-pointer rounded-2xl h-24 object-cover border-2 border-transparent hover:border-yellow-400 transition duration-300"   class="cursor-pointer rounded-2xl h-24 object-cover border-2 border-transparent hover:border-yellow-400 transition duration-300">
 
-    </div>
+                    @endforeach
 
-</div>
+                </div>
 
-            <!-- Informations -->
+            </div>
+
+            {{-- Informations --}}
 
             <div>
 
-                <span class="uppercase tracking-[4px] text-yellow-500 font-semibold">
-                   {{ $product->category->name }}
+                <span class="uppercase tracking-[4px] text-yellow-500 font-bold">
+
+                    {{ $product->category->name }}
+
                 </span>
 
-                <h1 class="mt-4 text-5xl font-extrabold text-gray-900">
+                <h1 class="mt-4 text-5xl xl:text-6xl font-black text-gray-900 leading-tight">
+
                     {{ $product->name }}
+
                 </h1>
 
-                <p class="mt-6 text-4xl font-bold text-yellow-500">
+                <div class="flex items-center gap-3 mt-6">
 
-                    € {{ number_format($product->price,2,',','.') }}
+                    <span class="text-yellow-400 text-xl">
+
+                        ★★★★★
+
+                    </span>
+
+                    <span class="text-gray-500">
+
+                        Premium Qualität
+
+                    </span>
+
+                </div>
+
+                <div class="mt-8">
+
+                    <span class="text-5xl font-black text-yellow-500">
+
+                        € {{ number_format($product->price,2,',','.') }}
+
+                    </span>
+
+                    <span class="ml-2 text-gray-500">
+
+                        inkl. MwSt.
+
+                    </span>
+
+                </div>
+
+                <p class="mt-8 text-lg leading-9 text-gray-600">
+
+                    {{ $product->short_description }}
 
                 </p>
 
-                <p class="mt-8 text-lg text-gray-600 leading-8">
+                <div class="grid grid-cols-2 gap-5 mt-10">
 
-                   {{ $product->short_description }}
-                </p>
+                    <div class="bg-white rounded-2xl p-5 shadow">
 
-                <div class="mt-10 space-y-4">
+                        <span class="text-gray-500 text-sm">
 
-    <div class="flex justify-between border-b pb-3">
+                            Marke
 
-        <span>Marke</span>
+                        </span>
 
-        <strong>{{ $product->brand ?: '-' }}</strong>
+                        <h3 class="font-bold text-xl mt-2">
 
-    </div>
+                            {{ $product->brand ?: 'Premium' }}
 
-    <div class="flex justify-between border-b pb-3">
+                        </h3>
 
-        <span>Artikelnummer (SKU)</span>
+                    </div>
 
-        <strong>{{ $product->sku }}</strong>
+                    <div class="bg-white rounded-2xl p-5 shadow">
 
-    </div>
+                        <span class="text-gray-500 text-sm">
 
-    <div class="flex justify-between border-b pb-3">
+                            SKU
 
-        <span>Lagerbestand</span>
+                        </span>
 
-        <strong>{{ $product->stock }}</strong>
+                        <h3 class="font-bold text-xl mt-2">
 
-    </div>
+                            {{ $product->sku }}
 
-    <div class="flex justify-between border-b pb-3">
+                        </h3>
 
-        <span>Gewicht</span>
+                    </div>
 
-        <strong>{{ $product->weight ? $product->weight.' kg' : '-' }}</strong>
+                    <div class="bg-white rounded-2xl p-5 shadow">
 
-    </div>
+                        <span class="text-gray-500 text-sm">
 
-    <div class="flex justify-between border-b pb-3">
+                            Lager
 
-        <span>Länge</span>
+                        </span>
 
-        <strong>{{ $product->length ? $product->length.' cm' : '-' }}</strong>
+                        <h3 class="font-bold text-xl mt-2">
 
-    </div>
+                            {{ $product->stock }}
 
-    <div class="flex justify-between border-b pb-3">
+                        </h3>
 
-        <span>Breite</span>
+                    </div>
 
-        <strong>{{ $product->width ? $product->width.' cm' : '-' }}</strong>
+                    <div class="bg-white rounded-2xl p-5 shadow">
 
-    </div>
+                        <span class="text-gray-500 text-sm">
 
-    <div class="flex justify-between border-b pb-3">
+                            Gewicht
 
-        <span>Höhe</span>
+                        </span>
 
-        <strong>{{ $product->height ? $product->height.' cm' : '-' }}</strong>
+                        <h3 class="font-bold text-xl mt-2">
 
-    </div>
+                            {{ $product->weight ? $product->weight.' kg' : '-' }}
 
-</div>
+                        </h3>
 
-                <div class="flex flex-wrap gap-5 mt-12">
+                    </div>
 
-                    <a href="{{ route('admin.orders.create',$product) }}"
-                       class="bg-yellow-400 hover:bg-yellow-500 transition px-8 py-4 rounded-xl font-bold">
+                    <div class="bg-white rounded-2xl p-5 shadow">
 
-                        Jetzt bestellen
+                        <span class="text-gray-500 text-sm">
 
+                            Länge
+
+                        </span>
+
+                        <h3 class="font-bold text-xl mt-2">
+
+                            {{ $product->length ? $product->length.' cm' : '-' }}
+
+                        </h3>
+
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-5 shadow">
+
+                        <span class="text-gray-500 text-sm">
+
+                            Breite
+
+                        </span>
+
+                        <h3 class="font-bold text-xl mt-2">
+
+                            {{ $product->width ? $product->width.' cm' : '-' }}
+
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="grid grid-cols-4 gap-4 mt-8">
+
+                    <div class="bg-white rounded-2xl shadow p-5 text-center">
+
+                        🚚
+
+                        <p class="mt-3 text-sm font-semibold">
+
+                            Lieferung
+
+                        </p>
+
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow p-5 text-center">
+
+                        🛡️
+
+                        <p class="mt-3 text-sm font-semibold">
+
+                            Garantie
+
+                        </p>
+
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow p-5 text-center">
+
+                        💳
+
+                        <p class="mt-3 text-sm font-semibold">
+
+                            Sicher
+
+                        </p>
+
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow p-5 text-center">
+
+                        ☎️
+
+                        <p class="mt-3 text-sm font-semibold">
+
+                            Support
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="flex gap-5 mt-10">
+
+                    <a href="{{ route('contact') }}"
+                       class="flex-1 bg-yellow-400 hover:bg-yellow-500 text-center py-4 rounded-2xl font-bold transition">
+
+                       Jetzt Angebot anfordern
                     </a>
 
-                   <a href="{{ route('contact') }}"
-                      class="border-2 border-black px-8 py-4 rounded-xl hover:bg-black hover:text-white transition">
+                    <a href="{{ route('products') }}"
+                       class="flex-1 border-2 border-gray-900 hover:bg-gray-900 hover:text-white text-center py-4 rounded-2xl font-bold transition">
 
-                      Kontakt
+                        Zurück
 
                     </a>
 
@@ -164,39 +289,179 @@
 
     <div class="max-w-7xl mx-auto px-6">
 
-        <h2 class="text-4xl font-bold mb-12">
+        <div class="text-center mb-16">
 
-            Produktbeschreibung
+            <span class="uppercase tracking-[4px] text-yellow-500 font-bold">
 
-        </h2>
+                Details
 
-        <div class="grid lg:grid-cols-2 gap-16">
+            </span>
+
+            <h2 class="text-5xl font-black mt-4">
+
+                Produktbeschreibung
+
+            </h2>
+
+            <p class="mt-5 max-w-3xl mx-auto text-gray-600 text-lg leading-8">
+
+                Entdecken Sie alle technischen Informationen und die Vorteile dieses hochwertigen Anhängers.
+
+            </p>
+
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-20">
 
             <div>
 
-               <p class="leading-9 text-gray-600">
+                <div class="bg-gray-50 rounded-3xl p-10 shadow-sm">
 
-    {{ $product->description }}
+                    <h3 class="text-3xl font-bold mb-8">
 
-</p>
+                        Beschreibung
+
+                    </h3>
+
+                    <div class="leading-9 text-gray-600 text-lg">
+
+                        {{ $product->description }}
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div>
+            <div class="space-y-6">
 
-                <ul class="space-y-5 text-lg">
+                <div class="bg-white rounded-3xl shadow p-7 flex gap-5">
 
-                    <li>✔ Verzinkter Stahlrahmen</li>
+                    <div class="text-4xl">
 
-                    <li>✔ Hohe Tragfähigkeit</li>
+                        ✔
 
-                    <li>✔ LED-Beleuchtung</li>
+                    </div>
 
-                    <li>✔ Robuster Boden</li>
+                    <div>
 
-                    <li>✔ Lange Lebensdauer</li>
+                        <h4 class="font-bold text-xl">
 
-                </ul>
+                            Verzinkter Stahlrahmen
+
+                        </h4>
+
+                        <p class="mt-2 text-gray-600">
+
+                            Maximaler Schutz gegen Korrosion und lange Lebensdauer.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-3xl shadow p-7 flex gap-5">
+
+                    <div class="text-4xl">
+
+                        ✔
+
+                    </div>
+
+                    <div>
+
+                        <h4 class="font-bold text-xl">
+
+                            Hohe Tragfähigkeit
+
+                        </h4>
+
+                        <p class="mt-2 text-gray-600">
+
+                            Ideal für professionelle und private Anwendungen.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-3xl shadow p-7 flex gap-5">
+
+                    <div class="text-4xl">
+
+                        ✔
+
+                    </div>
+
+                    <div>
+
+                        <h4 class="font-bold text-xl">
+
+                            LED-Beleuchtung
+
+                        </h4>
+
+                        <p class="mt-2 text-gray-600">
+
+                            Moderne Beleuchtung mit geringem Energieverbrauch.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-3xl shadow p-7 flex gap-5">
+
+                    <div class="text-4xl">
+
+                        ✔
+
+                    </div>
+
+                    <div>
+
+                        <h4 class="font-bold text-xl">
+
+                            Robuster Boden
+
+                        </h4>
+
+                        <p class="mt-2 text-gray-600">
+
+                            Entwickelt für intensive Nutzung und hohe Belastungen.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="bg-yellow-400 rounded-3xl p-8 mt-10">
+
+                    <h3 class="text-2xl font-black">
+
+                        Warum AC-Abschleppdienst?
+
+                    </h3>
+
+                    <ul class="mt-6 space-y-3 font-medium">
+
+                        <li>✓ Premium Qualität</li>
+
+                        <li>✓ Persönliche Beratung</li>
+
+                        <li>✓ Schnelle Lieferung</li>
+
+                        <li>✓ Faire Preise</li>
+
+                        <li>✓ Professioneller Kundenservice</li>
+
+                    </ul>
+
+                </div>
 
             </div>
 
@@ -205,15 +470,43 @@
     </div>
 
 </section>
-<section class="py-24 bg-gray-100">
+
+<section class="py-24 bg-[#f8fafc]">
 
     <div class="max-w-7xl mx-auto px-6">
 
-        <h2 class="text-4xl font-bold mb-12">
+        <div class="flex justify-between items-end mb-14">
 
-            Ähnliche Produkte
+            <div>
 
-        </h2>
+                <span class="uppercase tracking-[4px] text-yellow-500 font-bold">
+
+                    Empfehlungen
+
+                </span>
+
+                <h2 class="text-5xl font-black mt-3">
+
+                    Ähnliche Produkte
+
+                </h2>
+
+                <p class="text-gray-600 mt-4">
+
+                    Weitere Premium-Anhänger, die Sie interessieren könnten.
+
+                </p>
+
+            </div>
+
+            <a href="{{ route('products') }}"
+               class="hidden lg:inline-flex px-7 py-3 rounded-full border-2 border-black hover:bg-black hover:text-white transition">
+
+                Alle Produkte
+
+            </a>
+
+        </div>
 
         <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
 
@@ -224,49 +517,59 @@
                              ?? $related->images->first();
                 @endphp
 
-                <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+                <div class="bg-white rounded-[24px] overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-2xl transition duration-300">
 
-                    @if($image)
+                    <a href="{{ route('product.show',$related) }}">
 
-                        <img
-                            src="{{ asset('storage/'.$image->image) }}"
-                            class="w-full h-56 object-cover"
-                            alt="{{ $related->name }}">
+                        @if($image)
 
-                    @else
+                            <img
+                                src="{{ asset('storage/'.$image->image) }}"
+                                class="w-full h-64 object-cover"
+                                alt="{{ $related->name }}">
 
-                        <div class="w-full h-56 bg-gray-200 flex items-center justify-center">
+                        @else
 
-                            Kein Bild
+                            <div class="w-full h-64 bg-gray-200 flex items-center justify-center">
 
-                        </div>
+                                Kein Bild
 
-                    @endif
+                            </div>
 
-                    <div class="p-6">
+                        @endif
 
-                        <h3 class="text-xl font-bold">
+                    </a>
+
+                    <div class="p-7">
+
+                        <span class="text-sm uppercase tracking-[2px] text-yellow-500 font-bold">
+
+                            {{ $related->category->name }}
+
+                        </span>
+
+                        <h3 class="mt-3 text-2xl font-bold leading-tight">
 
                             {{ $related->name }}
 
                         </h3>
 
-                        <p class="text-gray-500 mt-2">
+                        <p class="mt-4 text-gray-600 line-clamp-3">
 
-                            {{ $related->category->name }}
+                            {{ $related->short_description }}
 
                         </p>
 
-                        <div class="flex justify-between items-center mt-6">
+                        <div class="flex items-center justify-between mt-8">
 
-                            <span class="text-2xl font-bold text-yellow-500">
+                            <span class="text-3xl font-black text-yellow-500">
 
                                 € {{ number_format($related->price,2,',','.') }}
 
                             </span>
 
                             <a href="{{ route('product.show',$related) }}"
-                               class="bg-black text-white px-4 py-2 rounded-lg hover:bg-yellow-500 hover:text-black transition">
+                               class="bg-black hover:bg-yellow-400 hover:text-black text-white px-5 py-3 rounded-xl transition font-bold">
 
                                 Details
 
@@ -280,9 +583,23 @@
 
             @empty
 
-                <div class="col-span-4 text-center py-10 text-gray-500">
+                <div class="col-span-4">
 
-                    Keine ähnlichen Produkte vorhanden.
+                    <div class="bg-white rounded-3xl p-16 text-center shadow">
+
+                        <h3 class="text-3xl font-bold">
+
+                            Keine ähnlichen Produkte vorhanden
+
+                        </h3>
+
+                        <p class="mt-4 text-gray-600">
+
+                            Weitere Anhänger werden in Kürze verfügbar sein.
+
+                        </p>
+
+                    </div>
 
                 </div>
 

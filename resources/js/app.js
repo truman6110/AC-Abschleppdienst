@@ -2,6 +2,7 @@
 
 import Alpine from 'alpinejs';
 import './products';
+import './hero';
 
 window.Alpine = Alpine;
 
@@ -23,4 +24,20 @@ window.SwiperModules = {
     EffectFade
 };
 
-import './hero';
+document.querySelectorAll('.thumbnail').forEach(image => {
+
+    image.addEventListener('click', function () {
+
+        document.getElementById('main-image').src = this.src;
+
+        document.querySelectorAll('.thumbnail').forEach(i => {
+
+            i.classList.remove('border-yellow-400');
+
+        });
+
+        this.classList.add('border-yellow-400');
+
+    });
+
+});
