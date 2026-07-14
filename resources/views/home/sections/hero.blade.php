@@ -1,51 +1,210 @@
-<section class="relative h-screen overflow-hidden">
+<section class="hero">
 
-    <!-- Background -->
-    <img
-        src="{{ asset('images/hero/hero-main.jpg') }}"
-        alt="AC-Abschleppdienst"
-        class="absolute inset-0 w-full h-full object-cover">
+    <div class="swiper heroSwiper">
 
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20"></div>
+        <div class="swiper-wrapper">
 
-    <!-- Content -->
-    <div class="relative z-10 flex items-center h-full">
+            {{-- Slide 1 --}}
+            <div class="swiper-slide">
 
-        <div class="max-w-7xl mx-auto px-6 w-full">
+                <img src="{{ asset('images/hero/hero1.jpg') }}" alt="Premium Anhänger">
 
-            <div class="max-w-3xl">
+                <div class="hero-overlay"></div>
 
-                <span class="uppercase tracking-[5px] text-yellow-400 font-semibold">
-                    Willkommen bei AC-Abschleppdienst
-                </span>
+                <div class="hero-container">
 
-                <h1 class="mt-6 text-5xl md:text-7xl font-extrabold text-white leading-tight">
-                    Professionelle Anhänger
-                    <br>
-                    für jeden Bedarf.
-                </h1>
+                    <div class="hero-badge">
+                        ★★★★★ 4.9/5 Kundenbewertung
+                    </div>
 
-                <p class="mt-8 text-xl text-gray-200 leading-9">
-                    Hochwertige Anhänger für Privatpersonen und Unternehmen.
-                    Qualität, Sicherheit und Zuverlässigkeit.
-                </p>
+                    <h1>
+                        Professionelle Anhänger
+                        <span>für höchste Ansprüche.</span>
+                    </h1>
 
-                <div class="mt-12 flex flex-wrap gap-5">
+                    <p>
 
-                    <a href="{{ route('products') }}"
-                        class="bg-yellow-400 hover:bg-yellow-500 transition px-8 py-4 rounded-xl font-bold text-black">
+                        Entdecken Sie hochwertige PKW-Anhänger,
+                        Autotransporter, Kipper und Kofferanhänger
+                        für Privat- und Gewerbekunden.
 
-                        Jetzt entdecken
+                        Qualität, Sicherheit und Zuverlässigkeit
+                        stehen bei uns an erster Stelle.
 
-                    </a>
+                    </p>
 
-                    <a href="{{ route('contact') }}"
-                        class="border border-white hover:bg-white hover:text-black transition px-8 py-4 rounded-xl text-white font-semibold">
+                    <div class="hero-buttons">
 
-                        Kontakt
+                        <a href="{{ route('products') }}" class="btn-yellow">
 
-                    </a>
+                            Anhänger entdecken
+
+                        </a>
+
+                        <a href="{{ route('contact') }}" class="btn-dark">
+
+                            Kostenlos beraten lassen
+
+                        </a>
+
+                    </div>
+
+                    <div class="hero-features">
+
+                        <div>
+
+                            ✓ Sofort verfügbar
+
+                        </div>
+
+                        <div>
+
+                            ✓ Premium Qualität
+
+                        </div>
+
+                        <div>
+
+                            ✓ Deutschlandweite Lieferung
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {{-- Slide 2 --}}
+            <div class="swiper-slide">
+
+                <img src="{{ asset('images/hero/hero2.jpg') }}" alt="Autotransporter">
+
+                <div class="hero-overlay"></div>
+
+                <div class="hero-container">
+
+                    <div class="hero-badge">
+
+                        Für Sportwagen & Nutzfahrzeuge
+
+                    </div>
+
+                    <h1>
+
+                        Autotransporter
+                        <span>für sicheren Fahrzeugtransport.</span>
+
+                    </h1>
+
+                    <p>
+
+                        Maximale Stabilität,
+                        hochwertige Verarbeitung
+                        und höchste Sicherheit
+                        für den professionellen Transport.
+
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="{{ route('products') }}" class="btn-yellow">
+
+                            Jetzt entdecken
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {{-- Slide 3 --}}
+            <div class="swiper-slide">
+
+                <img src="{{ asset('images/hero/hero3.jpg') }}" alt="Kipper">
+
+                <div class="hero-overlay"></div>
+
+                <div class="hero-container">
+
+                    <div class="hero-badge">
+
+                        Robust • Langlebig • Leistungsstark
+
+                    </div>
+
+                    <h1>
+
+                        Kipper
+                        <span>für Bau und Industrie.</span>
+
+                    </h1>
+
+                    <p>
+
+                        Entwickelt für den täglichen
+                        professionellen Einsatz.
+
+                        Robust, zuverlässig
+                        und einsatzbereit.
+
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="{{ route('products') }}" class="btn-yellow">
+
+                            Modelle ansehen
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {{-- Slide 4 --}}
+            <div class="swiper-slide">
+
+                <img src="{{ asset('images/hero/hero4.jpg') }}" alt="Kofferanhänger">
+
+                <div class="hero-overlay"></div>
+
+                <div class="hero-container">
+
+                    <div class="hero-badge">
+
+                        Geschützt unterwegs
+
+                    </div>
+
+                    <h1>
+
+                        Kofferanhänger
+                        <span>für jede Transportaufgabe.</span>
+
+                    </h1>
+
+                    <p>
+
+                        Ideal für empfindliche
+                        Waren, Werkzeuge
+                        und professionelle Transporte.
+
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="{{ route('products') }}" class="btn-yellow">
+
+                            Jetzt entdecken
+
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -53,16 +212,11 @@
 
         </div>
 
-    </div>
+        <div class="swiper-pagination"></div>
 
-    <!-- Scroll -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div class="swiper-button-prev"></div>
 
-        <div class="w-7 h-12 border-2 border-white rounded-full flex justify-center">
-
-            <div class="w-1.5 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
-
-        </div>
+        <div class="swiper-button-next"></div>
 
     </div>
 

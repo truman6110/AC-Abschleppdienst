@@ -1,0 +1,386 @@
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    position: relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.heroSwiper,
+.hero .swiper-wrapper,
+.hero .swiper-slide{
+    width:100%;
+    height:100%;
+}
+
+.hero .swiper-slide{
+    position:relative;
+    overflow:hidden;
+}
+
+.hero .swiper-slide img{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    animation: heroZoom 14s ease-in-out infinite alternate;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.72) 0%,
+            rgba(0,0,0,.55) 35%,
+            rgba(0,0,0,.25) 60%,
+            rgba(0,0,0,.15) 100%
+        );
+
+    z-index:1;
+
+}
+
+.hero-container{
+
+    position:relative;
+    z-index:5;
+
+    width:90%;
+    max-width:1400px;
+
+    height:100%;
+
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.hero-badge{
+
+    display:inline-flex;
+
+    width:max-content;
+
+    padding:10px 18px;
+
+    margin-bottom:25px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(8px);
+
+    color:#fff;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+}
+
+.hero h1{
+
+    color:white;
+
+    font-size:clamp(3rem,5vw,5.6rem);
+
+    line-height:1.05;
+
+    font-weight:800;
+
+    max-width:780px;
+
+    margin-bottom:18px;
+
+    text-shadow:0 5px 18px rgba(0,0,0,.35);
+
+}
+
+.hero h1 span{
+
+    display:block;
+
+    color:#F7C600;
+
+}
+
+.hero p{
+
+    color:#efefef;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    max-width:700px;
+
+    margin-bottom:45px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:45px;
+
+}
+
+.btn-yellow{
+
+    background:#F7C600;
+
+    color:#111;
+
+    padding:18px 34px;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.btn-yellow:hover{
+
+    background:white;
+
+    transform:translateY(-3px);
+
+}
+
+.btn-dark{
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    padding:18px 34px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(12px);
+
+    transition:.3s;
+
+}
+
+.btn-dark:hover{
+
+    background:white;
+
+    color:#111;
+
+}
+
+.hero-features{
+
+    display:flex;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-features div{
+
+    color:white;
+
+    font-weight:600;
+
+    opacity:.95;
+
+}
+
+.hero .swiper-button-next,
+.hero .swiper-button-prev{
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.hero .swiper-button-next:hover,
+.hero .swiper-button-prev:hover{
+
+    background:#F7C600;
+
+    color:#111;
+
+}
+
+.hero .swiper-button-next:after,
+.hero .swiper-button-prev:after{
+
+    font-size:20px;
+    font-weight:bold;
+
+}
+
+.hero .swiper-pagination{
+
+    bottom:40px !important;
+
+}
+
+.hero .swiper-pagination-bullet{
+
+    width:12px;
+    height:12px;
+
+    background:white;
+
+    opacity:.4;
+
+}
+
+.hero .swiper-pagination-bullet-active{
+
+    background:#F7C600;
+
+    opacity:1;
+
+    width:34px;
+
+    border-radius:20px;
+
+}
+
+@keyframes heroZoom{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.12);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+    .hero-container{
+
+        width:92%;
+
+    }
+
+    .hero h1{
+
+        font-size:3rem;
+
+    }
+
+    .hero p{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero{
+
+        height:92vh;
+
+    }
+
+    .hero h1{
+
+        font-size:2.4rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .btn-yellow,
+    .btn-dark{
+
+        width:100%;
+        text-align:center;
+
+    }
+
+    .hero-features{
+
+        gap:15px;
+
+        flex-direction:column;
+
+    }
+
+    .hero .swiper-button-next,
+    .hero .swiper-button-prev{
+
+        display:none;
+
+    }
+    .hero-container{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+}
