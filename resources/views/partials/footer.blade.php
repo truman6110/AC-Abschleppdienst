@@ -1,126 +1,229 @@
-<footer class="bg-black text-white">
+<footer class="bg-[#111827] text-white">
 
-    <div class="max-w-7xl mx-auto px-6 py-20">
+    <div class="max-w-7xl mx-auto px-6 py-24">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12">
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-14">
 
-            <!-- Logo -->
+            {{-- Entreprise --}}
 
             <div>
 
-                <h3 class="text-3xl font-bold text-yellow-400">
+                <h2 class="text-4xl font-black text-yellow-400">
+
                     AC-Abschleppdienst
-                </h3>
 
-                <p class="mt-6 text-gray-400 leading-8">
+                </h2>
 
-                    Ihr zuverlässiger Partner für hochwertige Anhänger
-                    in Deutschland.
+                <p class="mt-6 leading-8 text-gray-400">
+
+                    Premium Anhänger für Privatpersonen und Unternehmen.
+                    Qualität, Zuverlässigkeit und professionelle Beratung
+                    in ganz Deutschland.
 
                 </p>
 
+                <div class="flex gap-4 mt-8">
+
+                    <a href="#" class="w-11 h-11 rounded-full bg-gray-800 hover:bg-yellow-400 hover:text-black flex items-center justify-center transition">
+
+                        f
+
+                    </a>
+
+                    <a href="#" class="w-11 h-11 rounded-full bg-gray-800 hover:bg-yellow-400 hover:text-black flex items-center justify-center transition">
+
+                        in
+
+                    </a>
+
+                    <a href="#" class="w-11 h-11 rounded-full bg-gray-800 hover:bg-yellow-400 hover:text-black flex items-center justify-center transition">
+
+                        ▶
+
+                    </a>
+
+                </div>
+
             </div>
 
-            <!-- Navigation -->
+            {{-- Navigation --}}
 
             <div>
 
-                <h4 class="text-xl font-bold mb-6">
+                <h3 class="text-2xl font-bold mb-8">
+
                     Navigation
-                </h4>
 
-               <ul class="space-y-4 text-gray-400">
+                </h3>
+
+                <ul class="space-y-5">
 
                     <li>
-                        <a href="{{ route('home') }}" class="hover:text-yellow-400 transition">
+
+                        <a href="{{ route('home') }}" class="text-gray-400 hover:text-yellow-400 transition">
+
                             Startseite
+
                         </a>
+
                     </li>
 
                     <li>
-                        <a href="{{ route('products') }}" class="hover:text-yellow-400 transition">
+
+                        <a href="{{ route('products') }}" class="text-gray-400 hover:text-yellow-400 transition">
+
                             Anhänger
+
                         </a>
+
                     </li>
 
                     <li>
-                        <a href="{{ route('about') }}" class="hover:text-yellow-400 transition">
+
+                        <a href="{{ route('about') }}" class="text-gray-400 hover:text-yellow-400 transition">
+
                             Über uns
+
                         </a>
+
                     </li>
 
                     <li>
-                        <a href="{{ route('contact') }}" class="hover:text-yellow-400 transition">
+
+                        <a href="{{ route('contact') }}" class="text-gray-400 hover:text-yellow-400 transition">
+
                             Kontakt
+
                         </a>
+
                     </li>
 
                 </ul>
 
             </div>
 
-            <!-- Kontakt -->
+            {{-- Kontakt --}}
 
             <div>
 
-                <h4 class="text-xl font-bold mb-6">
+                <h3 class="text-2xl font-bold mb-8">
+
                     Kontakt
-                </h4>
 
-                <ul class="space-y-4 text-gray-400">
+                </h3>
 
-                    <li>📞 +49 123 456 789</li>
+                <ul class="space-y-5 text-gray-400">
 
-                    <li>✉ info@ac-abschleppdienst.de</li>
+                    <li>
 
-                    <li>📍 Deutschland</li>
+                        📞 +49 123 456 789
+
+                    </li>
+
+                    <li>
+
+                        ✉ info@ac-abschleppdienst.de
+
+                    </li>
+
+                    <li>
+
+                        📍 Deutschland
+
+                    </li>
+
+                    <li>
+
+                        🚚 Lieferung deutschlandweit
+
+                    </li>
 
                 </ul>
 
             </div>
 
-            <!-- Öffnungszeiten -->
+            {{-- Horaires --}}
 
             <div>
 
-                <h4 class="text-xl font-bold mb-6">
+                <h3 class="text-2xl font-bold mb-8">
+
                     Öffnungszeiten
-                </h4>
 
-                <ul class="space-y-4 text-gray-400">
+                </h3>
 
-                    <li>Mo - Fr : 08:00 - 18:00</li>
+                <div class="space-y-4 text-gray-400">
 
-                    <li>Samstag : 09:00 - 14:00</li>
+                    <div class="flex justify-between">
 
-                    <li>Sonntag : Geschlossen</li>
+                        <span>Mo - Fr</span>
 
-                </ul>
+                        <strong class="text-white">
+
+                            08:00 - 18:00
+
+                        </strong>
+
+                    </div>
+
+                    <div class="flex justify-between">
+
+                        <span>Samstag</span>
+
+                        <strong class="text-white">
+
+                            09:00 - 14:00
+
+                        </strong>
+
+                    </div>
+
+                    <div class="flex justify-between">
+
+                        <span>Sonntag</span>
+
+                        <strong class="text-red-400">
+
+                            Geschlossen
+
+                        </strong>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
-        <div class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="border-t border-gray-800 mt-20 pt-8 flex flex-col lg:flex-row justify-between items-center">
 
-            <p class="text-gray-500">
+            <p class="text-gray-500 text-center lg:text-left">
 
-                © {{ date('Y') }} AC-Abschleppdienst. Alle Rechte vorbehalten.
+                © {{ date('Y') }}
+                AC-Abschleppdienst.
+                Alle Rechte vorbehalten.
 
             </p>
 
-            <div class="flex gap-8 mt-6 md:mt-0">
+            <div class="flex flex-wrap gap-8 mt-6 lg:mt-0">
 
                 <a href="#" class="text-gray-500 hover:text-yellow-400 transition">
+
                     Impressum
+
                 </a>
 
                 <a href="#" class="text-gray-500 hover:text-yellow-400 transition">
+
                     Datenschutz
+
                 </a>
 
                 <a href="#" class="text-gray-500 hover:text-yellow-400 transition">
+
                     AGB
+
                 </a>
 
             </div>
