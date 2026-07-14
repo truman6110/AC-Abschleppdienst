@@ -1,4 +1,5 @@
 @import './hero.css';
+@import './products.css';
 
 @tailwind base;
 @tailwind components;
