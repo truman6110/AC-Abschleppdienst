@@ -29,7 +29,7 @@
 
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
 
             @forelse($featuredProducts as $product)
 
@@ -38,69 +38,93 @@
                              ?? $product->images->first();
                 @endphp
 
-                <div class="group rounded-2xl overflow-hidden bg-white shadow hover:shadow-2xl transition duration-500">
+         <div class="group bg-white rounded-[28px] overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
 
-                    <div class="relative overflow-hidden">
+    <div class="relative overflow-hidden">
 
-                        @if($image)
+        @if($image)
 
-                            <img
-                                src="{{ asset('storage/'.$image->image) }}"
-                                class="w-full h-72 object-cover group-hover:scale-110 transition duration-700"
-                                alt="{{ $product->name }}">
+            <img
+                src="{{ asset('storage/'.$image->image) }}"
+                class="w-full h-72 object-cover group-hover:scale-110 transition duration-700"
+                alt="{{ $product->name }}">
 
-                        @else
+        @else
 
-                            <div class="w-full h-72 bg-gray-200 flex items-center justify-center">
+            <div class="w-full h-72 bg-gray-200 flex items-center justify-center">
 
-                                Kein Bild
+                Kein Bild
 
-                            </div>
+            </div>
 
-                        @endif
+        @endif
 
-                        <span class="absolute top-5 left-5 bg-yellow-400 text-black px-4 py-2 rounded-full font-bold">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent"></div>
 
-                            Bestseller
+        <span class="absolute top-5 left-5 bg-yellow-400 text-black px-5 py-2 rounded-full text-sm font-bold shadow">
 
-                        </span>
+            Bestseller
 
-                    </div>
+        </span>
 
-                    <div class="p-8">
+    </div>
 
-                        <h3 class="text-2xl font-bold">
+    <div class="p-8">
 
-                            {{ $product->name }}
+        <div class="flex items-center gap-2 text-yellow-400">
 
-                        </h3>
+            ★★★★★
 
-                        <p class="mt-4 text-gray-600">
+            <span class="text-gray-500 text-sm">
 
-                            {{ $product->short_description }}
+                Premium
 
-                        </p>
+            </span>
 
-                        <div class="mt-6 flex justify-between items-center">
+        </div>
 
-                            <span class="text-3xl font-bold text-yellow-500">
+        <h3 class="mt-4 text-2xl font-black text-gray-900 leading-tight">
 
-                                € {{ number_format($product->price,2,',','.') }}
+            {{ $product->name }}
 
-                            </span>
+        </h3>
 
-                           <a href="{{ route('product.show', $product) }}"
-                                 class="bg-black text-white px-5 py-3 rounded-lg hover:bg-yellow-500 hover:text-black transition">
+        <p class="mt-4 text-gray-600 leading-7 line-clamp-3">
 
-                                    Details
+            {{ $product->short_description }}
 
-                            </a>
+        </p>
 
-                        </div>
+        <div class="mt-8 flex justify-between items-center">
 
-                    </div>
+            <div>
 
-                </div>
+                <span class="block text-sm text-gray-500">
+
+                    Preis
+
+                </span>
+
+                <span class="text-3xl font-black text-yellow-500">
+
+                    € {{ number_format($product->price,2,',','.') }}
+
+                </span>
+
+            </div>
+
+            <a href="{{ route('product.show',$product) }}"
+               class="bg-black hover:bg-yellow-400 hover:text-black text-white px-6 py-3 rounded-xl font-bold transition">
+
+                Details
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
 
             @empty
 
