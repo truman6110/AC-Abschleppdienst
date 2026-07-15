@@ -167,6 +167,66 @@
 
             </div>
 
+                                <div>
+
+                <label class="font-semibold">
+                    Gewicht (kg)
+                </label>
+
+                <input
+                    type="number"
+                    step="0.01"
+                    name="weight"
+                    value="{{ old('weight') }}"
+                    class="w-full border rounded-xl mt-2 p-4">
+
+            </div>
+
+            <div>
+
+                <label class="font-semibold">
+                    Länge (cm)
+                </label>
+
+                <input
+                    type="number"
+                    step="0.01"
+                    name="length"
+                    value="{{ old('length') }}"
+                    class="w-full border rounded-xl mt-2 p-4">
+
+            </div>
+
+            <div>
+
+                <label class="font-semibold">
+                    Breite (cm)
+                </label>
+
+                <input
+                    type="number"
+                    step="0.01"
+                    name="width"
+                    value="{{ old('width') }}"
+                    class="w-full border rounded-xl mt-2 p-4">
+
+            </div>
+
+            <div>
+
+                <label class="font-semibold">
+                    Höhe (cm)
+                </label>
+
+                <input
+                    type="number"
+                    step="0.01"
+                    name="height"
+                    value="{{ old('height') }}"
+                    class="w-full border rounded-xl mt-2 p-4">
+
+            </div>
+
             <div>
 
                 <label class="font-semibold">

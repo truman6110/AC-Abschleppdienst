@@ -41,6 +41,10 @@ class ProductController extends Controller
             'price' => 'required|numeric|min:0',
             'sale_price' => 'nullable|numeric|min:0',
             'stock' => 'required|integer|min:0',
+            'weight' => 'nullable|numeric|min:0',
+            'length' => 'nullable|numeric|min:0',
+            'width'  => 'nullable|numeric|min:0',
+            'height' => 'nullable|numeric|min:0',
             'short_description' => 'nullable|string',
             'description' => 'nullable|string',
 
@@ -101,6 +105,10 @@ class ProductController extends Controller
             'price' => 'required|numeric|min:0',
             'sale_price' => 'nullable|numeric|min:0',
             'stock' => 'required|integer|min:0',
+            'weight' => 'nullable|numeric|min:0',
+            'length' => 'nullable|numeric|min:0',
+            'width'  => 'nullable|numeric|min:0',
+            'height' => 'nullable|numeric|min:0',
             'short_description' => 'nullable|string',
             'description' => 'nullable|string',
 
