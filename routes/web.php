@@ -1,13 +1,17 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\HomeController;
+
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\QuoteRequestController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+
 use App\Http\Controllers\Front\ProductController as FrontProductController;
 use App\Http\Controllers\Front\OrderController;
+use App\Http\Controllers\Front\QuoteRequestController as FrontQuoteRequestController;
 
 Route::get('/', HomeController::class)->name('home');
 
@@ -23,16 +27,22 @@ Route::get('/bestellen/{product:slug}', [OrderController::class, 'create'])
 Route::post('/bestellen/{product:slug}', [OrderController::class, 'store'])
     ->name('orders.store');
 
-Route::view('/kontakt', 'contact.index')->name('contact');
+Route::get('/kontakt', [FrontQuoteRequestController::class, 'create'])
+    ->name('contact');
 
-Route::view('/ueber-uns', 'about.index')->name('about');
+Route::post('/kontakt', [FrontQuoteRequestController::class, 'store'])
+    ->name('contact.store');
+
+Route::view('/ueber-uns', 'about.index')
+    ->name('about');
 
 Route::middleware(['auth'])
     ->prefix('admin')
     ->name('admin.')
     ->group(function () {
 
-        Route::get('/', DashboardController::class)->name('dashboard');
+        Route::get('/', DashboardController::class)
+            ->name('dashboard');
 
         Route::resource('categories', CategoryController::class);
 
@@ -42,7 +52,8 @@ Route::middleware(['auth'])
 
         Route::resource('quotes', QuoteRequestController::class);
 
-});
+    });
+
 Route::view('/bestellung-erfolgreich', 'orders.success')
     ->name('orders.success');
 

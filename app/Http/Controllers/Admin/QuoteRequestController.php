@@ -3,63 +3,47 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\QuoteRequest;
 use Illuminate\Http\Request;
 
 class QuoteRequestController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $quotes = QuoteRequest::latest()->paginate(15);
+
+        return view('admin.quotes.index', compact('quotes'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function show(QuoteRequest $quote)
     {
-        //
+        return view('admin.quotes.show', compact('quote'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function edit(QuoteRequest $quote)
     {
-        //
+        return view('admin.quotes.edit', compact('quote'));
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function update(Request $request, QuoteRequest $quote)
     {
-        //
+        $request->validate([
+            'status' => 'required|in:new,contacted,completed,cancelled',
+        ]);
+
+        $quote->update([
+            'status' => $request->status,
+        ]);
+
+        return redirect()
+            ->route('admin.quotes.index')
+            ->with('success', 'Status erfolgreich aktualisiert.');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function destroy(QuoteRequest $quote)
     {
-        //
-    }
+        $quote->delete();
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return back()->with('success', 'Anfrage gelöscht.');
     }
 }

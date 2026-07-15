@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+@section('title','Anhänger kaufen | AC-Abschleppdienst')
+
+@section('description','Entdecken Sie hochwertige Anhänger für Privatpersonen und Unternehmen.')
 
 @include('products.partials.hero')
 
