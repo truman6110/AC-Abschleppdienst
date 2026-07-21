@@ -49,23 +49,21 @@
 
         <div class="product-specs">
 
-            <div>
-
-                <strong>{{ $product->gross_weight ?? '-' }}</strong>
-
-                <span>kg</span>
-
-            </div>
-
-            <div>
-
-                <strong>{{ $product->axles ?? '-' }}</strong>
-
-                <span>Achsen</span>
-
-            </div>
-
+    @if($product->gross_weight)
+        <div>
+            <strong>{{ $product->gross_weight }}</strong>
+            <span>kg</span>
         </div>
+    @endif
+
+    @if($product->axles)
+        <div>
+            <strong>{{ $product->axles }}</strong>
+            <span>Achsen</span>
+        </div>
+    @endif
+
+</div>
 
         <div class="product-footer">
 

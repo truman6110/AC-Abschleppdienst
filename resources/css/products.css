@@ -747,8 +747,8 @@
 
 }
 
-.products-pagination span,
-.products-pagination a{
+.products-pagination a,
+.products-pagination span[aria-current="page"]{
 
     width:44px;
 
@@ -769,6 +769,28 @@
     transition:.3s;
 
     font-weight:600;
+
+}
+
+.products-pagination p{
+
+    margin:0;
+
+}
+
+.products-pagination span:not([aria-current="page"]){
+
+    width:auto;
+
+    height:auto;
+
+    background:transparent;
+
+    color:#6b7280;
+
+    margin:0;
+
+    display:inline;
 
 }
 
