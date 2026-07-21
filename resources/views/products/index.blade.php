@@ -59,11 +59,21 @@
 
                     </div>
 
-                    <div class="products-pagination">
+                    <div class="products-pagination flex justify-center gap-4 mt-10">
 
-                        {{ $products->links() }}
+    @if ($products->previousPageUrl())
+        <a href="{{ $products->previousPageUrl() }}" class="product-button">
+            ← Zurück
+        </a>
+    @endif
 
-                    </div>
+    @if ($products->nextPageUrl())
+        <a href="{{ $products->nextPageUrl() }}" class="product-button">
+            Weiter →
+        </a>
+    @endif
+
+</div>
 
                 @else
 
