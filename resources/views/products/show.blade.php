@@ -1,12 +1,26 @@
 @extends('layouts.app')
 
+@push('styles')
+<style>
+
+.thumbnail.active{
+    border-color:#facc15;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+</style>
+@endpush
+
 @section('content')
 
 <section class="bg-[#f8fafc] py-24">
 
     <div class="max-w-7xl mx-auto px-6">
 
-        <div class="grid lg:grid-cols-2 gap-20 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start"> 
 
             {{-- Galerie --}}
 
@@ -19,19 +33,19 @@
 
                 @if($cover)
 
-                    <div class="bg-white rounded-[28px] overflow-hidden shadow-xl">
+                  <div class="bg-white rounded-[28px] overflow-hidden shadow-xl border border-gray-100 group">
 
                         <img
                             id="main-image"
                             src="{{ asset('storage/'.$cover->image) }}"
-                            class="w-full h-[560px] object-cover"
+                          class="w-full h-[350px] md:h-[450px] lg:h-[560px] object-cover group-hover:scale-105 transition duration-500"
                             alt="{{ $product->name }}">
 
                     </div>
 
                 @else
 
-                    <div class="bg-gray-200 rounded-[28px] h-[560px] flex items-center justify-center">
+                    <div class="bg-gray-200 rounded-[28px] h-[350px] md:h-[450px] lg:h-[560px] flex items-center justify-center">
 
                         Kein Bild
 
@@ -46,7 +60,8 @@
                         <img
                             src="{{ asset('storage/'.$image->image) }}"
                             onclick="document.getElementById('main-image').src=this.src"
-                         class="thumbnail cursor-pointer rounded-2xl h-24 object-cover border-2 border-transparent hover:border-yellow-400 transition duration-300"   class="cursor-pointer rounded-2xl h-24 object-cover border-2 border-transparent hover:border-yellow-400 transition duration-300">
+                          class="thumbnail w-full h-24 cursor-pointer rounded-2xl object-cover border-2 {{ $loop->first ? 'border-yellow-400' : 'border-transparent' }} hover:border-yellow-400 hover:scale-105 transition duration-300"
+                            alt="{{ $product->name }}">
 
                     @endforeach
 
@@ -63,6 +78,20 @@
                     {{ $product->category->name }}
 
                 </span>
+
+                <div class="mt-4 flex flex-wrap gap-3">
+
+    <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold">
+        <i class="bi bi-check-circle-fill me-1"></i>
+        Verfügbar
+    </span>
+
+    <span class="bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full text-sm font-semibold">
+        <i class="bi bi-award-fill me-1"></i>
+        Premium Qualität
+    </span>
+
+</div>
 
                 <h1 class="mt-4 text-5xl xl:text-6xl font-black text-gray-900 leading-tight">
 
@@ -86,21 +115,21 @@
 
                 </div>
 
-                <div class="mt-8">
+           <div class="mt-8 flex items-end gap-3 flex-wrap">
 
-                    <span class="text-5xl font-black text-yellow-500">
+    <span class="text-4xl lg:text-5xl font-black text-yellow-500 whitespace-nowrap">
 
-                        € {{ number_format($product->price,2,',','.') }}
+        € {{ number_format($product->price,2,',','.') }}
 
-                    </span>
+    </span>
 
-                    <span class="ml-2 text-gray-500">
+    <span class="text-base text-gray-500 font-medium">
 
-                        inkl. MwSt.
+        inkl. MwSt.
 
-                    </span>
+    </span>
 
-                </div>
+</div>
 
                 <p class="mt-8 text-lg leading-9 text-gray-600">
 
@@ -108,9 +137,9 @@
 
                 </p>
 
-                <div class="grid grid-cols-2 gap-5 mt-10">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
 
-                    <div class="bg-white rounded-2xl p-5 shadow">
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300" >
 
                         <span class="text-gray-500 text-sm">
 
@@ -126,7 +155,7 @@
 
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 shadow">
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
                         <span class="text-gray-500 text-sm">
 
@@ -142,7 +171,7 @@
 
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 shadow">
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
                         <span class="text-gray-500 text-sm">
 
@@ -150,69 +179,47 @@
 
                         </span>
 
-                        <h3 class="font-bold text-xl mt-2">
+                        <h3 class="font-bold text-xl mt-2 flex items-center gap-2">
 
-                            {{ $product->stock }}
+    <span class="w-3 h-3 rounded-full bg-green-500"></span>
 
-                        </h3>
+    @if($product->stock > 0)
+        Auf Lager ({{ $product->stock }})
+    @else
+        Nicht verfügbar
+    @endif
 
-                    </div>
-
-                    <div class="bg-white rounded-2xl p-5 shadow">
-
-                        <span class="text-gray-500 text-sm">
-
-                            Gewicht
-
-                        </span>
-
-                        <h3 class="font-bold text-xl mt-2">
-
-                            {{ $product->weight ? $product->weight.' kg' : '-' }}
-
-                        </h3>
+</h3>
 
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 shadow">
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
-                        <span class="text-gray-500 text-sm">
+    <span class="text-gray-500 text-sm">
+        Gewicht | Abmessungen
+    </span>
 
-                            Länge
+    <h3 class="font-bold text-xl mt-2">
 
-                        </span>
+        {{ $product->weight ? $product->weight.' kg' : '-' }}
 
-                        <h3 class="font-bold text-xl mt-2">
+        |
 
-                            {{ $product->length ? $product->length.' cm' : '-' }}
+        {{ $product->length ? $product->length : '-' }}
+        ×
+        {{ $product->width ? $product->width : '-' }} cm
 
-                        </h3>
+    </h3>
 
-                    </div>
-
-                    <div class="bg-white rounded-2xl p-5 shadow">
-
-                        <span class="text-gray-500 text-sm">
-
-                            Breite
-
-                        </span>
-
-                        <h3 class="font-bold text-xl mt-2">
-
-                            {{ $product->width ? $product->width.' cm' : '-' }}
-
-                        </h3>
-
-                    </div>
+</div>
 
                 </div>
 
-                <div class="grid grid-cols-4 gap-4 mt-8">
+               <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
 
                     <div class="bg-white rounded-2xl shadow p-5 text-center">
 
-                        🚚
+                        <i class="bi bi-truck text-4xl text-yellow-500"></i>
 
                         <p class="mt-3 text-sm font-semibold">
 
@@ -224,7 +231,7 @@
 
                     <div class="bg-white rounded-2xl shadow p-5 text-center">
 
-                        🛡️
+                       <i class="bi bi-shield-check text-4xl text-yellow-500"></i>
 
                         <p class="mt-3 text-sm font-semibold">
 
@@ -236,7 +243,7 @@
 
                     <div class="bg-white rounded-2xl shadow p-5 text-center">
 
-                        💳
+                       <i class="bi bi-bank text-4xl text-yellow-500"></i>
 
                         <p class="mt-3 text-sm font-semibold">
 
@@ -248,7 +255,7 @@
 
                     <div class="bg-white rounded-2xl shadow p-5 text-center">
 
-                        ☎️
+                      <i class="bi bi-headset text-4xl text-yellow-500"></i>
 
                         <p class="mt-3 text-sm font-semibold">
 
@@ -260,22 +267,27 @@
 
                 </div>
 
-                <div class="flex gap-5 mt-10">
+               <div class="flex flex-col sm:flex-row gap-5 mt-10">
 
-                    <a href="{{ route('contact') }}"
-                       class="flex-1 bg-yellow-400 hover:bg-yellow-500 text-center py-4 rounded-2xl font-bold transition">
+    <a href="{{ route('contact') }}"
+       class="flex-1 inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black py-4 rounded-2xl font-bold text-lg transition duration-300">
 
-                       Jetzt Angebot anfordern
-                    </a>
+        <i class="bi bi-chat-dots-fill"></i>
 
-                    <a href="{{ route('products') }}"
-                       class="flex-1 border-2 border-gray-900 hover:bg-gray-900 hover:text-white text-center py-4 rounded-2xl font-bold transition">
+        Jetzt Angebot anfordern
 
-                        Zurück
+    </a>
 
-                    </a>
+    <a href="{{ route('products') }}"
+       class="flex-1 inline-flex items-center justify-center gap-2 border-2 border-gray-900 hover:bg-gray-900 hover:text-white py-4 rounded-2xl font-bold text-lg transition duration-300">
 
-                </div>
+        <i class="bi bi-arrow-left"></i>
+
+        Zurück
+
+    </a>
+
+</div>
 
             </div>
 
@@ -315,15 +327,15 @@
 
             <div>
 
-                <div class="bg-gray-50 rounded-3xl p-10 shadow-sm">
+            <div class="bg-white rounded-3xl p-10 border border-gray-100 shadow-lg">   
 
-                    <h3 class="text-3xl font-bold mb-8">
+                  <h3 class="text-3xl font-black mb-8 text-gray-900">
 
                         Beschreibung
 
                     </h3>
 
-                    <div class="leading-9 text-gray-600 text-lg">
+                    <div class="leading-9 text-gray-700 text-lg">
 
                         {{ $product->description }}
 
@@ -337,12 +349,11 @@
 
                 <div class="bg-white rounded-3xl shadow p-7 flex gap-5">
 
-                    <div class="text-4xl">
+                  <div class="text-4xl text-green-600 flex-shrink-0">
 
-                        ✔
+    <i class="bi bi-check-circle-fill"></i>
 
-                    </div>
-
+</div>
                     <div>
 
                         <h4 class="font-bold text-xl">
@@ -362,12 +373,11 @@
                 </div>
 
                 <div class="bg-white rounded-3xl shadow p-7 flex gap-5">
+<div class="text-4xl text-green-600 flex-shrink-0">
 
-                    <div class="text-4xl">
+    <i class="bi bi-check-circle-fill"></i>
 
-                        ✔
-
-                    </div>
+</div>
 
                     <div>
 
@@ -389,11 +399,11 @@
 
                 <div class="bg-white rounded-3xl shadow p-7 flex gap-5">
 
-                    <div class="text-4xl">
+                    <div class="text-4xl text-green-600 flex-shrink-0">
 
-                        ✔
+    <i class="bi bi-check-circle-fill"></i>
 
-                    </div>
+</div>
 
                     <div>
 
@@ -415,11 +425,11 @@
 
                 <div class="bg-white rounded-3xl shadow p-7 flex gap-5">
 
-                    <div class="text-4xl">
+                   <div class="text-4xl text-green-600 flex-shrink-0">
 
-                        ✔
+    <i class="bi bi-check-circle-fill"></i>
 
-                    </div>
+</div>
 
                     <div>
 
@@ -439,16 +449,15 @@
 
                 </div>
 
-                <div class="bg-yellow-400 rounded-3xl p-8 mt-10">
+              <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-3xl p-8 mt-10 shadow-xl">  <div class="bg-yellow-400 rounded-3xl p-8 mt-10">
 
-                    <h3 class="text-2xl font-black">
+                  <h3 class="text-3xl font-black text-gray-900">
 
                         Warum AC-Abschleppdienst?
 
                     </h3>
 
-                    <ul class="mt-6 space-y-3 font-medium">
-
+<ul class="mt-6 space-y-4 font-medium text-lg">
                         <li>✓ Premium Qualität</li>
 
                         <li>✓ Persönliche Beratung</li>
@@ -508,7 +517,7 @@
 
         </div>
 
-        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
 
             @forelse($relatedProducts as $related)
 
@@ -517,7 +526,7 @@
                              ?? $related->images->first();
                 @endphp
 
-                <div class="bg-white rounded-[24px] overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+                <div class="bg-white rounded-[24px] overflow-hidden border border-gray-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
 
                     <a href="{{ route('product.show',$related) }}">
 
@@ -525,7 +534,7 @@
 
                             <img
                                 src="{{ asset('storage/'.$image->image) }}"
-                                class="w-full h-64 object-cover"
+                               class="w-full h-64 object-cover hover:scale-105 transition duration-500"
                                 alt="{{ $related->name }}">
 
                         @else
@@ -560,7 +569,23 @@
 
                         </p>
 
-                        <div class="flex items-center justify-between mt-8">
+                        <div class="mt-5 flex flex-wrap gap-2">
+
+    @if($related->weight)
+        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">
+            {{ $related->weight }} kg
+        </span>
+    @endif
+
+    @if($related->length && $related->width)
+        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">
+            {{ $related->length }} × {{ $related->width }} cm
+        </span>
+    @endif
+
+</div>
+
+                       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-8"> 
 
                             <span class="text-3xl font-black text-yellow-500">
 
@@ -569,10 +594,11 @@
                             </span>
 
                             <a href="{{ route('product.show',$related) }}"
-                               class="bg-black hover:bg-yellow-400 hover:text-black text-white px-5 py-3 rounded-xl transition font-bold">
+                            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black hover:bg-yellow-400 hover:text-black text-white px-5 py-3 rounded-xl transition duration-300 font-bold"
+
+                              <i class="bi bi-eye-fill"></i>
 
                                 Details
-
                             </a>
 
                         </div>
@@ -624,5 +650,26 @@
 </div>
 
 @endif
+@push('scripts')
+<script>
+
+document.querySelectorAll('.thumbnail').forEach(function(image){
+
+    image.addEventListener('click', function(){
+
+        document.querySelectorAll('.thumbnail').forEach(function(img){
+
+            img.classList.remove('border-yellow-400');
+
+        });
+
+        this.classList.add('border-yellow-400');
+
+    });
+
+});
+
+</script>
+@endpush
 
 @endsection
