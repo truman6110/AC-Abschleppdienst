@@ -58,3 +58,19 @@ Route::view('/bestellung-erfolgreich', 'orders.success')
     ->name('orders.success');
 
 require __DIR__.'/auth.php';
+
+Route::view('/impressum', 'impressum')->name('impressum');
+
+Route::view('/datenschutz', 'datenschutz')->name('datenschutz');
+
+Route::view('/agb', 'agb')->name('agb');
+
+Route::view('/widerruf', 'widerruf')->name('widerruf');
+
+Route::view('/versand', 'versand')->name('versand');
+
+Route::view('/zahlung', 'zahlung')->name('zahlung');
+
+Route::view('/garantie', 'garantie')->name('garantie');
+
+Route::view('/faq', 'faq')->name('faq');

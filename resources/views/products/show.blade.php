@@ -147,9 +147,11 @@ html{
 
                         </span>
 
-                        <h3 class="font-bold text-xl mt-2">
+                    <h3 class="font-bold text-lg lg:text-xl mt-2 break-words">
 
-                            {{ $product->brand ?: 'Premium' }}
+                          <span class="break-all">
+    {{ $product->brand ?: 'Premium' }}
+</span>
 
                         </h3>
 
@@ -335,7 +337,7 @@ html{
 
                     </h3>
 
-                    <div class="leading-9 text-gray-700 text-lg">
+                   <div class="leading-7 lg:leading-9 text-base lg:text-lg text-gray-700 break-words overflow-hidden">
 
                         {{ $product->description }}
 
