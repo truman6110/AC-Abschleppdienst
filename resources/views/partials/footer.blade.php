@@ -26,19 +26,19 @@
 
                     <a href="#" class="w-11 h-11 rounded-full bg-gray-800 hover:bg-yellow-400 hover:text-black flex items-center justify-center transition">
 
-                        f
+                    <i class="bi bi-facebook"></i>
 
                     </a>
 
                     <a href="#" class="w-11 h-11 rounded-full bg-gray-800 hover:bg-yellow-400 hover:text-black flex items-center justify-center transition">
 
-                        in
+                      <i class="bi bi-linkedin"></i>
 
                     </a>
 
                     <a href="#" class="w-11 h-11 rounded-full bg-gray-800 hover:bg-yellow-400 hover:text-black flex items-center justify-center transition">
 
-                        ▶
+                       <i class="bi bi-youtube"></i>
 
                     </a>
 
@@ -116,25 +116,29 @@
 
                     <li>
 
-                        📞 +49 123 456 789
+                      <i class="bi bi-telephone-fill text-yellow-400 me-2"></i>
+                                +49 123 456 789
 
                     </li>
 
                     <li>
 
-                        ✉ info@ac-abschleppdienst.de
+                       <i class="bi bi-envelope-fill text-yellow-400 me-2"></i>
+info@ac-abschleppdienst.de
 
                     </li>
 
                     <li>
 
-                        📍 Deutschland
+                       <i class="bi bi-geo-alt-fill text-yellow-400 me-2"></i>
+Deutschland
 
                     </li>
 
                     <li>
 
-                        🚚 Lieferung deutschlandweit
+                       <i class="bi bi-truck text-yellow-400 me-2"></i>
+Lieferung deutschlandweit
 
                     </li>
 
@@ -208,22 +212,34 @@
 
             <div class="flex flex-wrap gap-8 mt-6 lg:mt-0">
 
-                <a href="#" class="text-gray-500 hover:text-yellow-400 transition">
-
-                    Impressum
-
+               <a href="{{ route('impressum') }}" class="text-gray-500 hover:text-yellow-400 transition">
+                       Impressum
+                </a>
+                <a href="{{ route('datenschutz') }}" class="text-gray-500 hover:text-yellow-400 transition">
+                     Datenschutz
                 </a>
 
-                <a href="#" class="text-gray-500 hover:text-yellow-400 transition">
-
-                    Datenschutz
-
+               <a href="{{ route('agb') }}" class="text-gray-500 hover:text-yellow-400 transition">
+                 AGB
+                </a>
+                <a href="{{ route('widerruf') }}" class="text-gray-500 hover:text-yellow-400 transition">
+                    Widerruf
                 </a>
 
-                <a href="#" class="text-gray-500 hover:text-yellow-400 transition">
+                <a href="{{ route('versand') }}" class="text-gray-500 hover:text-yellow-400 transition">
+                    Versand
+                </a>
 
-                    AGB
+                <a href="{{ route('zahlung') }}" class="text-gray-500 hover:text-yellow-400 transition">
+                    Zahlung
+                </a>
 
+                <a href="{{ route('garantie') }}" class="text-gray-500 hover:text-yellow-400 transition">
+                    Garantie
+                </a>
+
+                <a href="{{ route('faq') }}" class="text-gray-500 hover:text-yellow-400 transition">
+                    FAQ
                 </a>
 
             </div>
