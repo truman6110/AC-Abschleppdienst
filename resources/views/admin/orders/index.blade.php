@@ -38,10 +38,11 @@
 
                 <th class="text-center p-5">Menge</th>
 
+                <th class="text-center p-5">Zahlungsnachweis</th>
+
                 <th class="text-center p-5">Status</th>
 
                 <th class="text-center p-5">Aktionen</th>
-
             </tr>
 
         </thead>
@@ -66,15 +67,29 @@
 
                 <td class="p-5">
 
-                    {{ $order->product->name }}
+                   {{ optional($order->items->first()?->product)->name ?? 'Produit supprimé' }}
 
                 </td>
 
                 <td class="p-5 text-center">
 
-                    {{ $order->quantity }}
+                  {{ $order->items->sum('quantity') }}
 
                 </td>
+
+                            <td class="p-5 text-center">
+                @if($order->payment_proof)
+                    <a href="{{ asset('storage/'.$order->payment_proof) }}"
+                    target="_blank"
+                    class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700">
+                        Ansehen
+                    </a>
+                @else
+                    <span class="text-gray-500">
+                        Keine Datei
+                    </span>
+                @endif
+            </td>
 
                 <td class="p-5 text-center">
 
@@ -167,7 +182,7 @@
 
             <tr>
 
-                <td colspan="6"
+                <td colspan="7"
                     class="text-center py-20 text-gray-500">
 
                     Keine Bestellungen vorhanden.

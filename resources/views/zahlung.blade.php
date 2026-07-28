@@ -5,111 +5,123 @@
 @section('content')
 
 <section class="bg-gray-50 py-20">
+<div class="max-w-5xl mx-auto px-6">
 
-    <div class="max-w-5xl mx-auto px-6">
+<div class="bg-white rounded-3xl shadow-lg p-10">
 
-        <div class="bg-white rounded-3xl shadow-lg p-10 lg:p-14">
+<h1 class="text-4xl font-bold mb-10">
+Zahlungsarten
+</h1>
 
-            <h1 class="text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+<div class="space-y-8 text-gray-700 leading-8">
 
-                Zahlungsarten
+<div>
 
-            </h1>
+<h2 class="text-2xl font-semibold mb-4">
+Banküberweisung
+</h2>
 
-            <p class="text-gray-600 mb-10">
+<p>
 
-                Informationen zu den verfügbaren Zahlungsmöglichkeiten bei AC-Abschleppdienst.
+Derzeit akzeptieren wir Zahlungen ausschließlich per Banküberweisung.
 
-            </p>
+Nach Eingang Ihrer Bestellung erhalten Sie alle erforderlichen Zahlungsinformationen per E-Mail.
 
-            <div class="space-y-10">
+Die Bearbeitung Ihrer Bestellung beginnt nach vollständigem Zahlungseingang.
 
-                <div>
+</p>
 
-                    <h2 class="text-2xl font-bold mb-4">
+</div>
 
-                        Banküberweisung
+<div>
 
-                    </h2>
+<h2 class="text-2xl font-semibold mb-4">
+Zahlungsfrist
+</h2>
 
-                    <p class="text-gray-700 leading-8">
+<p>
 
-                        Derzeit akzeptieren wir Zahlungen ausschließlich per Banküberweisung. Nach Bestätigung Ihrer Bestellung oder Ihres Angebots erhalten Sie unsere vollständigen Bankverbindungsdaten.
+Bitte überweisen Sie den Rechnungsbetrag innerhalb von 7 Kalendertagen nach Erhalt der Bestellbestätigung.
 
-                    </p>
+Sollte innerhalb dieser Frist kein Zahlungseingang erfolgen, behalten wir uns vor, die Bestellung zu stornieren.
 
-                </div>
+</p>
 
-                <div>
+</div>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<div>
 
-                        Zahlungsfrist
+<h2 class="text-2xl font-semibold mb-4">
+Verwendungszweck
+</h2>
 
-                    </h2>
+<p>
 
-                    <p class="text-gray-700 leading-8">
+Bitte geben Sie bei der Überweisung Ihre Bestellnummer als Verwendungszweck an, damit wir Ihre Zahlung schnell zuordnen können.
 
-                        Die Zahlung ist innerhalb der auf der Rechnung angegebenen Frist zu leisten. Der Versand der Ware erfolgt nach Zahlungseingang oder gemäß einer ausdrücklich vereinbarten Regelung.
+</p>
 
-                    </p>
+</div>
 
-                </div>
+<div>
 
-                <div>
+<h2 class="text-2xl font-semibold mb-4">
+Sicherheit
+</h2>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<p>
 
-                        Währung
+Alle Zahlungen werden gemäß den geltenden gesetzlichen Bestimmungen verarbeitet.
 
-                    </h2>
+Ihre persönlichen Daten werden vertraulich behandelt und ausschließlich zur Abwicklung Ihrer Bestellung verwendet.
 
-                    <p class="text-gray-700 leading-8">
+</p>
 
-                        Alle Zahlungen erfolgen ausschließlich in Euro (€).
+</div>
 
-                    </p>
+<div>
 
-                </div>
+<h2 class="text-2xl font-semibold mb-4">
+Rechnung
+</h2>
 
-                <div>
+<p>
 
-                    <h2 class="text-2xl font-bold mb-4">
+Nach erfolgreichem Zahlungseingang erhalten Sie eine Rechnung per E-Mail.
 
-                        Zahlungssicherheit
+Bitte bewahren Sie diese für Ihre Unterlagen auf.
 
-                    </h2>
+</p>
 
-                    <p class="text-gray-700 leading-8">
+</div>
 
-                        Ihre Zahlungsinformationen werden vertraulich behandelt. Bankdaten werden ausschließlich zur Abwicklung Ihrer Bestellung verwendet.
+<div>
 
-                    </p>
+<h2 class="text-2xl font-semibold mb-4">
+Kontakt
+</h2>
 
-                </div>
+<p>
 
-                <div>
+Bei Fragen zu Ihrer Zahlung helfen wir Ihnen gerne weiter.
 
-                    <h2 class="text-2xl font-bold mb-4">
+<br><br>
 
-                        Fragen zur Zahlung
+Telefon: +49 15782137847
 
-                    </h2>
+<br>
 
-                    <p class="text-gray-700 leading-8">
+E-Mail: info@ac-abschleppdienst.com
 
-                        Bei Fragen zu Rechnungen oder Zahlungen steht Ihnen unser Kundenservice jederzeit gerne zur Verfügung.
+</p>
 
-                    </p>
+</div>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </div>
-
-    </div>
-
+</div>
 </section>
 
 @endsection

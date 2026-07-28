@@ -5,80 +5,110 @@
 @section('content')
 
 <section class="bg-gray-50 py-20">
+<div class="max-w-5xl mx-auto px-6">
 
-    <div class="max-w-5xl mx-auto px-6">
+<div class="bg-white rounded-3xl shadow-lg p-10">
 
-        <div class="bg-white rounded-3xl shadow-lg p-10 lg:p-14">
+<h1 class="text-4xl font-bold mb-10">
+Häufig gestellte Fragen (FAQ)
+</h1>
 
-            <h1 class="text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+<div class="space-y-10 text-gray-700 leading-8">
 
-                Häufig gestellte Fragen (FAQ)
+<div>
+<h2 class="text-2xl font-semibold mb-4">
+Wie kann ich eine Bestellung aufgeben?
+</h2>
 
-            </h1>
+<p>
+Wählen Sie den gewünschten Anhänger aus, legen Sie ihn in den Warenkorb und folgen Sie dem Bestellvorgang. Nach Eingang Ihrer Bestellung erhalten Sie eine Bestätigung per E-Mail.
+</p>
+</div>
 
-            <p class="text-gray-600 mb-10">
+<div>
+<h2 class="text-2xl font-semibold mb-4">
+Welche Zahlungsmethoden akzeptieren Sie?
+</h2>
 
-                Antworten auf die häufigsten Fragen unserer Kunden.
+<p>
+Derzeit akzeptieren wir ausschließlich Banküberweisung. Die Zahlungsinformationen erhalten Sie nach Abschluss Ihrer Bestellung.
+</p>
+</div>
 
-            </p>
+<div>
+<h2 class="text-2xl font-semibold mb-4">
+Wie lange dauert die Lieferung?
+</h2>
 
-            <div class="space-y-8">
+<p>
+Innerhalb Deutschlands beträgt die Lieferzeit in der Regel etwa 3 Werktage. Lieferungen in andere europäische Länder erfolgen normalerweise innerhalb von bis zu 14 Werktagen.
+</p>
+</div>
 
-                <div>
-                    <h2 class="text-2xl font-bold mb-3">Wie kann ich einen Anhänger bestellen?</h2>
-                    <p class="text-gray-700 leading-8">
-                        Kontaktieren Sie uns über unser Kontaktformular oder telefonisch. Nach Bestätigung erhalten Sie alle weiteren Informationen.
-                    </p>
-                </div>
+<div>
+<h2 class="text-2xl font-semibold mb-4">
+Liefern Sie auch außerhalb Deutschlands?
+</h2>
 
-                <div>
-                    <h2 class="text-2xl font-bold mb-3">Welche Zahlungsmethode bieten Sie an?</h2>
-                    <p class="text-gray-700 leading-8">
-                        Wir akzeptieren derzeit ausschließlich Banküberweisung.
-                    </p>
-                </div>
+<p>
+Ja. Wir liefern in viele europäische Länder. Falls Ihr Land nicht verfügbar ist, kontaktieren Sie uns bitte direkt.
+</p>
+</div>
 
-                <div>
-                    <h2 class="text-2xl font-bold mb-3">Liefern Sie außerhalb Deutschlands?</h2>
-                    <p class="text-gray-700 leading-8">
-                        Ja. Wir liefern innerhalb Deutschlands sowie in zahlreiche Länder der Europäischen Union.
-                    </p>
-                </div>
+<div>
+<h2 class="text-2xl font-semibold mb-4">
+Kann ich einen individuell angefertigten Anhänger bestellen?
+</h2>
 
-                <div>
-                    <h2 class="text-2xl font-bold mb-3">Wie lange dauert die Lieferung?</h2>
-                    <p class="text-gray-700 leading-8">
-                        Lagernde Produkte werden in der Regel innerhalb von 2 bis 5 Werktagen in Deutschland geliefert. Lieferungen innerhalb der EU dauern je nach Zielland zwischen 3 und 10 Werktagen.
-                    </p>
-                </div>
+<p>
+Ja. Wir bieten auch individuell konfigurierte und maßgefertigte Anhänger an. Kontaktieren Sie uns für ein persönliches Angebot.
+</p>
+</div>
 
-                <div>
-                    <h2 class="text-2xl font-bold mb-3">Gibt es eine Garantie?</h2>
-                    <p class="text-gray-700 leading-8">
-                        Ja. Es gelten die gesetzlichen Gewährleistungsrechte sowie gegebenenfalls die Herstellergarantie.
-                    </p>
-                </div>
+<div>
+<h2 class="text-2xl font-semibold mb-4">
+Gibt es eine Garantie?
+</h2>
 
-                <div>
-                    <h2 class="text-2xl font-bold mb-3">Kann ich einen Anhänger zurückgeben?</h2>
-                    <p class="text-gray-700 leading-8">
-                        Verbraucher haben das gesetzliche Widerrufsrecht gemäß den geltenden deutschen Vorschriften. Weitere Informationen finden Sie in unserer Widerrufsbelehrung.
-                    </p>
-                </div>
+<p>
+Für alle Produkte gelten die gesetzlichen Gewährleistungsrechte. Je nach Hersteller kann zusätzlich eine Herstellergarantie bestehen.
+</p>
+</div>
 
-                <div>
-                    <h2 class="text-2xl font-bold mb-3">Wie erhalte ich ein Angebot?</h2>
-                    <p class="text-gray-700 leading-8">
-                        Nutzen Sie unser Kontaktformular. Unser Team erstellt Ihnen schnell ein individuelles Angebot.
-                    </p>
-                </div>
+<div>
+<h2 class="text-2xl font-semibold mb-4">
+Kann ich meine Bestellung widerrufen?
+</h2>
 
-            </div>
+<p>
+Verbraucher haben grundsätzlich ein gesetzliches Widerrufsrecht. Für individuell angefertigte Produkte können gesetzliche Ausnahmen gelten. Weitere Informationen finden Sie auf unserer Seite "Widerrufsrecht".
+</p>
+</div>
 
-        </div>
+<div>
+<h2 class="text-2xl font-semibold mb-4">
+Wie kann ich den Kundenservice kontaktieren?
+</h2>
 
-    </div>
+<p>
 
+Telefon:<br>
++49 15782137847
+
+<br><br>
+
+E-Mail:<br>
+info@ac-abschleppdienst.com
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 </section>
 
 @endsection

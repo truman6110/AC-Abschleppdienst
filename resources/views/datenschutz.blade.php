@@ -5,193 +5,254 @@
 @section('content')
 
 <section class="bg-gray-50 py-20">
+<div class="max-w-5xl mx-auto px-6">
 
-    <div class="max-w-5xl mx-auto px-6">
+<div class="bg-white rounded-3xl shadow-lg p-10">
 
-        <div class="bg-white rounded-3xl shadow-lg p-10 lg:p-14">
+<h1 class="text-4xl font-bold mb-10">
+Datenschutzerklärung
+</h1>
 
-            <h1 class="text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+<div class="space-y-10 text-gray-700 leading-8">
 
-                Datenschutzerklärung
+<div>
+<h2 class="text-2xl font-semibold mb-4">
+1. Verantwortlicher
+</h2>
 
-            </h1>
+<p>
 
-            <p class="text-gray-600 mb-10">
+AC-Abschleppdienst<br>
 
-                Der Schutz Ihrer persönlichen Daten hat für AC-Abschleppdienst höchste Priorität.
+Inhaber: Francois Pierre<br>
 
-            </p>
+Haarener Gracht 9<br>
 
-            <div class="space-y-10">
+52080 Aachen<br>
 
-                <div>
+Deutschland
 
-                    <h2 class="text-2xl font-bold mb-4">
+</p>
 
-                        1. Verantwortlicher
+<p class="mt-4">
 
-                    </h2>
+Telefon:
++49 15782137847
 
-                    <p class="text-gray-700 leading-8">
+<br>
 
-                        Verantwortlich für die Verarbeitung personenbezogener Daten ist AC-Abschleppdienst.
+E-Mail:
+info@ac-abschleppdienst.com
 
-                    </p>
+</p>
 
-                </div>
+</div>
 
-                <div>
+<div>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<h2 class="text-2xl font-semibold mb-4">
+2. Erhebung personenbezogener Daten
+</h2>
 
-                        2. Erhebung personenbezogener Daten
+<p>
 
-                    </h2>
+Wir erheben personenbezogene Daten ausschließlich,
+wenn Sie uns diese freiwillig zur Verfügung stellen,
+beispielsweise über das Kontaktformular,
+per E-Mail oder bei einer Bestellung.
 
-                    <p class="text-gray-700 leading-8">
+</p>
 
-                        Wir erheben personenbezogene Daten ausschließlich, wenn Sie uns diese freiwillig im Rahmen einer Anfrage, Bestellung oder Kontaktaufnahme mitteilen.
+</div>
 
-                    </p>
+<div>
 
-                </div>
+<h2 class="text-2xl font-semibold mb-4">
+3. Verarbeitete Daten
+</h2>
 
-                <div>
+<p>
 
-                    <h2 class="text-2xl font-bold mb-4">
+Je nach Nutzung unserer Website können folgende
+Daten verarbeitet werden:
 
-                        3. Verwendung Ihrer Daten
+</p>
 
-                    </h2>
+<ul class="list-disc ml-8 mt-4">
 
-                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+<li>Name</li>
 
-                        <li>Bearbeitung von Bestellungen</li>
+<li>E-Mail-Adresse</li>
 
-                        <li>Erstellung von Angeboten</li>
+<li>Telefonnummer</li>
 
-                        <li>Kundenservice</li>
+<li>Lieferadresse</li>
 
-                        <li>Lieferung der Ware</li>
+<li>Rechnungsadresse</li>
 
-                        <li>Gesetzliche Aufbewahrungspflichten</li>
+<li>Bestelldaten</li>
 
-                    </ul>
+<li>IP-Adresse</li>
 
-                </div>
+<li>Browserinformationen</li>
 
-                <div>
+</ul>
 
-                    <h2 class="text-2xl font-bold mb-4">
+</div>
 
-                        4. Weitergabe an Dritte
+<div>
 
-                    </h2>
+<h2 class="text-2xl font-semibold mb-4">
+4. Zweck der Verarbeitung
+</h2>
 
-                    <p class="text-gray-700 leading-8">
+<p>
 
-                        Eine Weitergabe erfolgt ausschließlich, soweit dies zur Vertragsabwicklung, Lieferung oder aufgrund gesetzlicher Verpflichtungen erforderlich ist.
+Die Daten werden verarbeitet zur:
 
-                    </p>
+</p>
 
-                </div>
+<ul class="list-disc ml-8 mt-4">
 
-                <div>
+<li>Bearbeitung von Anfragen</li>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<li>Abwicklung von Bestellungen</li>
 
-                        5. Cookies
+<li>Lieferung der Ware</li>
 
-                    </h2>
+<li>Kundenkommunikation</li>
 
-                    <p class="text-gray-700 leading-8">
+<li>Verbesserung unseres Services</li>
 
-                        Unsere Website verwendet technisch notwendige Cookies, um die Funktionalität der Website sicherzustellen.
+<li>Erfüllung gesetzlicher Verpflichtungen</li>
 
-                    </p>
+</ul>
 
-                </div>
+</div>
 
-                <div>
+<div>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<h2 class="text-2xl font-semibold mb-4">
+5. Cookies
+</h2>
 
-                        6. Speicherdauer
+<p>
 
-                    </h2>
+Unsere Website verwendet technisch notwendige Cookies,
+um die Funktionalität der Website sicherzustellen.
 
-                    <p class="text-gray-700 leading-8">
+Marketing- oder Analyse-Cookies werden nur verwendet,
+wenn hierfür eine entsprechende Einwilligung vorliegt.
 
-                        Personenbezogene Daten werden nur so lange gespeichert, wie dies für die Vertragsabwicklung oder gesetzliche Vorschriften erforderlich ist.
+</p>
 
-                    </p>
+</div>
 
-                </div>
+<div>
 
-                <div>
+<h2 class="text-2xl font-semibold mb-4">
+6. Weitergabe an Dritte
+</h2>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<p>
 
-                        7. Ihre Rechte
+Eine Weitergabe personenbezogener Daten erfolgt
+nur soweit dies zur Vertragsabwicklung erforderlich ist,
+beispielsweise an Versanddienstleister oder
+Zahlungsdienstleister.
 
-                    </h2>
+</p>
 
-                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+</div>
 
-                        <li>Auskunft</li>
+<div>
 
-                        <li>Berichtigung</li>
+<h2 class="text-2xl font-semibold mb-4">
+7. Speicherdauer
+</h2>
 
-                        <li>Löschung</li>
+<p>
 
-                        <li>Einschränkung der Verarbeitung</li>
+Personenbezogene Daten werden nur so lange gespeichert,
+wie dies für die Vertragsabwicklung oder aufgrund
+gesetzlicher Aufbewahrungspflichten erforderlich ist.
 
-                        <li>Datenübertragbarkeit</li>
+</p>
 
-                        <li>Widerspruch</li>
+</div>
 
-                    </ul>
+<div>
 
-                </div>
+<h2 class="text-2xl font-semibold mb-4">
+8. Ihre Rechte
+</h2>
 
-                <div>
+<p>
 
-                    <h2 class="text-2xl font-bold mb-4">
+Sie haben jederzeit das Recht auf:
 
-                        8. Datensicherheit
+</p>
 
-                    </h2>
+<ul class="list-disc ml-8 mt-4">
 
-                    <p class="text-gray-700 leading-8">
+<li>Auskunft</li>
 
-                        Wir schützen Ihre Daten durch moderne technische und organisatorische Sicherheitsmaßnahmen.
+<li>Berichtigung</li>
 
-                    </p>
+<li>Löschung</li>
 
-                </div>
+<li>Einschränkung der Verarbeitung</li>
 
-                <div>
+<li>Datenübertragbarkeit</li>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<li>Widerspruch gegen die Verarbeitung</li>
 
-                        9. Kontakt
+</ul>
 
-                    </h2>
+</div>
 
-                    <p class="text-gray-700 leading-8">
+<div>
 
-                        Bei Fragen zum Datenschutz können Sie uns jederzeit per E-Mail kontaktieren.
+<h2 class="text-2xl font-semibold mb-4">
+9. Kontakt zum Datenschutz
+</h2>
 
-                    </p>
+<p>
 
-                </div>
+Bei Fragen zum Datenschutz erreichen Sie uns unter:
 
-            </div>
+</p>
 
-        </div>
+<p class="mt-4">
 
-    </div>
+E-Mail:
+info@ac-abschleppdienst.com
 
+</p>
+
+</div>
+
+<div>
+
+<h2 class="text-2xl font-semibold mb-4">
+10. Änderungen
+</h2>
+
+<p>
+
+Wir behalten uns vor,
+diese Datenschutzerklärung jederzeit anzupassen,
+damit sie den aktuellen gesetzlichen Anforderungen entspricht.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 </section>
 
 @endsection

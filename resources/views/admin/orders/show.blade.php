@@ -61,7 +61,7 @@
 
                 <p><strong>Straße :</strong> {{ $order->street }}</p>
 
-                <p><strong>PLZ :</strong> {{ $order->postal_code }}</p>
+              <p><strong>PLZ :</strong> {{ $order->zip }}</p>
 
                 <p><strong>Stadt :</strong> {{ $order->city }}</p>
 
@@ -81,17 +81,41 @@
 
             <div class="space-y-4">
 
-                <p><strong>Produkt :</strong> {{ $order->product->name }}</p>
+               <p>
+                    <strong>Produkt :</strong>
+                    {{ optional($order->items->first()?->product)->name ?? 'Produkt gelöscht' }}
+                </p>
 
-                <p><strong>Menge :</strong> {{ $order->quantity }}</p>
+                <p>
+                    <strong>Menge :</strong>
+                    {{ $order->items->sum('quantity') }}
+                </p>
 
                 <p><strong>Status :</strong> {{ $order->status }}</p>
+
+               
+<p>Valeur : {{ $order->payment_proof }}</p>
+
+@if($order->payment_proof)
+
+    <div class="mt-4">
+        <strong>Zahlungsnachweis :</strong><br>
+
+        <a href="{{ asset('storage/'.$order->payment_proof) }}"
+           target="_blank"
+           class="inline-block mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+            Nachweis ansehen
+        </a>
+    </div>
+@else
+    <p><strong>Zahlungsnachweis :</strong> Keine Datei.</p>
+@endif
 
                 <p><strong>Nachricht :</strong></p>
 
                 <div class="bg-gray-100 rounded-xl p-4">
 
-                    {{ $order->message ?: 'Keine Nachricht.' }}
+                  {{ $order->comment ?: 'Keine Nachricht.' }}
 
                 </div>
 

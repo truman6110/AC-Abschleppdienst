@@ -3,30 +3,30 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Order extends Model
 {
     protected $fillable = [
-
-        'product_id',
         'order_number',
         'first_name',
         'last_name',
         'email',
         'phone',
         'street',
-        'postal_code',
+        'zip',
         'city',
         'country',
-        'quantity',
-        'message',
+        'comment',
+        'total',
         'status',
 
+        // Ajouter ces deux lignes
+        'payment_proof',
+        'payment_sent_at',
     ];
 
-    public function product(): BelongsTo
+    public function items()
     {
-        return $this->belongsTo(Product::class);
+        return $this->hasMany(OrderItem::class);
     }
 }

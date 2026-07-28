@@ -271,12 +271,12 @@ html{
 
                <div class="flex flex-col sm:flex-row gap-5 mt-10">
 
-    <a href="{{ route('contact') }}"
+    <a href="{{ route('checkout.show', $product) }}"
        class="flex-1 inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black py-4 rounded-2xl font-bold text-lg transition duration-300">
 
         <i class="bi bi-chat-dots-fill"></i>
 
-        Jetzt Angebot anfordern
+       Jetzt kaufen
 
     </a>
 

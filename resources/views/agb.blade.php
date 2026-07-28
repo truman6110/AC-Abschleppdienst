@@ -1,179 +1,285 @@
 @extends('layouts.app')
 
-@section('title', 'Allgemeine Geschäftsbedingungen')
+@section('title', 'Allgemeine Geschäftsbedingungen (AGB)')
 
 @section('content')
 
 <section class="bg-gray-50 py-20">
+<div class="max-w-5xl mx-auto px-6">
 
-    <div class="max-w-5xl mx-auto px-6">
+<div class="bg-white rounded-3xl shadow-lg p-10">
 
-        <div class="bg-white rounded-3xl shadow-lg p-10 lg:p-14">
+<h1 class="text-4xl font-bold mb-10">
+Allgemeine Geschäftsbedingungen (AGB)
+</h1>
 
-            <h1 class="text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+<div class="space-y-10 text-gray-700 leading-8">
 
-                Allgemeine Geschäftsbedingungen (AGB)
+<div>
 
-            </h1>
+<h2 class="text-2xl font-semibold mb-4">
+§1 Geltungsbereich
+</h2>
 
-            <p class="text-gray-600 mb-10">
+<p>
 
-                Diese Allgemeinen Geschäftsbedingungen gelten für sämtliche Verträge zwischen AC-Abschleppdienst und seinen Kunden.
+Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen AC-Abschleppdienst und unseren Kunden über den Verkauf von Anhängern, Ersatzteilen und Zubehör über unseren Online-Shop.
 
-            </p>
+Abweichende Bedingungen des Kunden finden keine Anwendung, sofern ihrer Geltung nicht ausdrücklich schriftlich zugestimmt wurde.
 
-            <div class="space-y-10">
+</p>
 
-                <div>
+</div>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<div>
 
-                        1. Geltungsbereich
+<h2 class="text-2xl font-semibold mb-4">
+§2 Anbieter
+</h2>
 
-                    </h2>
+<p>
 
-                    <p class="text-gray-700 leading-8">
+AC-Abschleppdienst
 
-                        Diese AGB gelten für alle Lieferungen und Leistungen von AC-Abschleppdienst über unseren Online-Shop.
+<br>
 
-                    </p>
+Inhaber:
+Francois Pierre
 
-                </div>
+<br>
 
-                <div>
+Haarener Gracht 9
 
-                    <h2 class="text-2xl font-bold mb-4">
+<br>
 
-                        2. Vertragsschluss
+52080 Aachen
 
-                    </h2>
+<br>
 
-                    <p class="text-gray-700 leading-8">
+Deutschland
 
-                        Die Präsentation unserer Produkte stellt kein rechtlich bindendes Angebot dar. Ein Vertrag kommt erst nach schriftlicher Bestätigung oder Lieferung zustande.
+<br><br>
 
-                    </p>
+Telefon:
++49 15782137847
 
-                </div>
+<br>
 
-                <div>
+E-Mail:
+info@ac-abschleppdienst.com
 
-                    <h2 class="text-2xl font-bold mb-4">
+</p>
 
-                        3. Preise
+</div>
 
-                    </h2>
+<div>
 
-                    <p class="text-gray-700 leading-8">
+<h2 class="text-2xl font-semibold mb-4">
+§3 Vertragsabschluss
+</h2>
 
-                        Alle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer, sofern nicht anders angegeben.
+<p>
 
-                    </p>
+Die Darstellung unserer Produkte stellt kein rechtlich bindendes Angebot dar.
 
-                </div>
+Mit dem Absenden einer Bestellung gibt der Kunde ein verbindliches Angebot zum Abschluss eines Kaufvertrages ab.
 
-                <div>
+Der Vertrag kommt erst durch unsere schriftliche Auftragsbestätigung oder durch den Versand der Ware zustande.
 
-                    <h2 class="text-2xl font-bold mb-4">
+</p>
 
-                        4. Zahlung
+</div>
 
-                    </h2>
+<div>
 
-                    <p class="text-gray-700 leading-8">
+<h2 class="text-2xl font-semibold mb-4">
+§4 Preise
+</h2>
 
-                        Die Zahlung erfolgt ausschließlich per Banküberweisung, sofern keine andere Zahlungsart ausdrücklich vereinbart wurde.
+<p>
 
-                    </p>
+Alle Preise verstehen sich in Euro.
 
-                </div>
+Sofern nicht anders angegeben, gelten die zum Zeitpunkt der Bestellung auf unserer Website veröffentlichten Preise.
 
-                <div>
+Versandkosten werden während des Bestellvorgangs gesondert ausgewiesen.
 
-                    <h2 class="text-2xl font-bold mb-4">
+</p>
 
-                        5. Lieferung
+</div>
 
-                    </h2>
+<div>
 
-                    <p class="text-gray-700 leading-8">
+<h2 class="text-2xl font-semibold mb-4">
+§5 Zahlungsbedingungen
+</h2>
 
-                        Lieferungen erfolgen innerhalb Deutschlands sowie in ausgewählte Länder der Europäischen Union. Die Lieferzeit richtet sich nach Produktverfügbarkeit und Lieferadresse.
+<p>
 
-                    </p>
+Die Zahlung erfolgt derzeit ausschließlich per Banküberweisung.
 
-                </div>
+Der Versand erfolgt nach vollständigem Zahlungseingang, sofern keine andere schriftliche Vereinbarung getroffen wurde.
 
-                <div>
+</p>
 
-                    <h2 class="text-2xl font-bold mb-4">
+</div>
 
-                        6. Eigentumsvorbehalt
+<div>
 
-                    </h2>
+<h2 class="text-2xl font-semibold mb-4">
+§6 Lieferung
+</h2>
 
-                    <p class="text-gray-700 leading-8">
+<p>
 
-                        Die Ware bleibt bis zur vollständigen Bezahlung Eigentum von AC-Abschleppdienst.
+Die Lieferung erfolgt innerhalb Deutschlands in der Regel innerhalb von 3 Werktagen.
 
-                    </p>
+Lieferungen in andere europäische Länder erfolgen in der Regel innerhalb von bis zu 14 Werktagen.
 
-                </div>
+Bei individuell gefertigten Anhängern können sich die Lieferzeiten verlängern.
 
-                <div>
+Sollte ein Produkt vorübergehend nicht verfügbar sein, informieren wir den Kunden schnellstmöglich.
 
-                    <h2 class="text-2xl font-bold mb-4">
+</p>
 
-                        7. Gewährleistung
+</div>
 
-                    </h2>
+<div>
 
-                    <p class="text-gray-700 leading-8">
+<h2 class="text-2xl font-semibold mb-4">
+§7 Eigentumsvorbehalt
+</h2>
 
-                        Es gelten die gesetzlichen Gewährleistungsrechte sowie gegebenenfalls Herstellergarantien.
+<p>
 
-                    </p>
+Bis zur vollständigen Bezahlung bleibt die gelieferte Ware Eigentum von AC-Abschleppdienst.
 
-                </div>
+</p>
 
-                <div>
+</div>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<div>
 
-                        8. Haftung
+<h2 class="text-2xl font-semibold mb-4">
+§8 Gewährleistung
+</h2>
 
-                    </h2>
+<p>
 
-                    <p class="text-gray-700 leading-8">
+Es gelten die gesetzlichen Gewährleistungsrechte.
 
-                        AC-Abschleppdienst haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Im Übrigen gelten die gesetzlichen Haftungsbestimmungen.
+Offensichtliche Transportschäden sind uns möglichst unmittelbar nach Erhalt der Ware mitzuteilen.
 
-                    </p>
+Die Gewährleistung erstreckt sich nicht auf Schäden, die durch unsachgemäße Verwendung, normale Abnutzung, mangelnde Wartung oder eigenmächtige Veränderungen entstanden sind.
 
-                </div>
+</p>
 
-                <div>
+</div>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<div>
 
-                        9. Schlussbestimmungen
+<h2 class="text-2xl font-semibold mb-4">
+§9 Haftung
+</h2>
 
-                    </h2>
+<p>
 
-                    <p class="text-gray-700 leading-8">
+AC-Abschleppdienst haftet uneingeschränkt für Schäden, die auf Vorsatz oder grober Fahrlässigkeit beruhen.
 
-                        Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist – soweit gesetzlich zulässig – der Sitz von AC-Abschleppdienst.
+Bei leicht fahrlässigen Pflichtverletzungen ist unsere Haftung auf den vorhersehbaren, vertragstypischen Schaden begrenzt.
 
-                    </p>
+Die Haftungsbeschränkungen gelten nicht bei Schäden aus der Verletzung von Leben, Körper oder Gesundheit sowie bei Ansprüchen nach zwingenden gesetzlichen Vorschriften.
 
-                </div>
+</p>
 
-            </div>
+</div>
 
-        </div>
+<div>
 
-    </div>
+<h2 class="text-2xl font-semibold mb-4">
+§10 Widerrufsrecht
+</h2>
 
+<p>
+
+Verbrauchern steht grundsätzlich ein gesetzliches Widerrufsrecht zu.
+
+Die Einzelheiten ergeben sich aus unserer gesonderten Widerrufsbelehrung.
+
+Das Widerrufsrecht kann in gesetzlich vorgesehenen Fällen ausgeschlossen sein, insbesondere bei individuell angefertigten Produkten.
+
+</p>
+
+</div>
+
+<div>
+
+<h2 class="text-2xl font-semibold mb-4">
+§11 Datenschutz
+</h2>
+
+<p>
+
+Personenbezogene Daten werden ausschließlich nach den geltenden Datenschutzbestimmungen verarbeitet.
+
+Weitere Informationen finden Sie in unserer Datenschutzerklärung.
+
+</p>
+
+</div>
+
+<div>
+
+<h2 class="text-2xl font-semibold mb-4">
+§12 Anwendbares Recht
+</h2>
+
+<p>
+
+Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts, soweit gesetzlich zulässig.
+
+Für Verbraucher gelten die zwingenden Verbraucherschutzvorschriften ihres gewöhnlichen Aufenthaltslandes, soweit diese anwendbar sind.
+
+</p>
+
+</div>
+
+<div>
+
+<h2 class="text-2xl font-semibold mb-4">
+§13 Gerichtsstand
+</h2>
+
+<p>
+
+Ist der Kunde Kaufmann, eine juristische Person des öffentlichen Rechts oder ein öffentlich-rechtliches Sondervermögen, ist Gerichtsstand Aachen.
+
+</p>
+
+</div>
+
+<div>
+
+<h2 class="text-2xl font-semibold mb-4">
+§14 Schlussbestimmungen
+</h2>
+
+<p>
+
+Sollten einzelne Bestimmungen dieser Allgemeinen Geschäftsbedingungen ganz oder teilweise unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
+
+An die Stelle der unwirksamen Regelung tritt die gesetzliche Regelung.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 </section>
 
 @endsection
+

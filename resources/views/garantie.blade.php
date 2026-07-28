@@ -1,139 +1,147 @@
 @extends('layouts.app')
 
-@section('title', 'Garantie & Gewährleistung')
+@section('title', 'Garantie')
 
 @section('content')
 
 <section class="bg-gray-50 py-20">
+<div class="max-w-5xl mx-auto px-6">
 
-    <div class="max-w-5xl mx-auto px-6">
+<div class="bg-white rounded-3xl shadow-lg p-10">
 
-        <div class="bg-white rounded-3xl shadow-lg p-10 lg:p-14">
+<h1 class="text-4xl font-bold mb-10">
+Garantie & Gewährleistung
+</h1>
 
-            <h1 class="text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+<div class="space-y-8 text-gray-700 leading-8">
 
-                Garantie & Gewährleistung
+<div>
 
-            </h1>
+<h2 class="text-2xl font-semibold mb-4">
+Gesetzliche Gewährleistung
+</h2>
 
-            <p class="text-gray-600 mb-10">
+<p>
 
-                Informationen zu Garantie, gesetzlicher Gewährleistung und unserem Kundenservice.
+Für alle bei AC-Abschleppdienst erworbenen Produkte gelten die gesetzlichen Gewährleistungsrechte nach deutschem Recht.
 
-            </p>
+Sollte ein Produkt bei Erhalt einen Mangel aufweisen, kontaktieren Sie uns bitte schnellstmöglich.
 
-            <div class="space-y-10">
+</p>
 
-                <div>
+</div>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<div>
 
-                        Gesetzliche Gewährleistung
+<h2 class="text-2xl font-semibold mb-4">
+Herstellergarantie
+</h2>
 
-                    </h2>
+<p>
 
-                    <p class="text-gray-700 leading-8">
+Einige Produkte können zusätzlich durch eine Herstellergarantie abgedeckt sein.
 
-                        Für alle bei AC-Abschleppdienst gekauften Neuprodukte gelten die gesetzlichen Gewährleistungsrechte nach deutschem Recht. Sollten Mängel auftreten, haben Sie Anspruch auf Nacherfüllung gemäß den gesetzlichen Bestimmungen.
+Die jeweiligen Garantiebedingungen richten sich ausschließlich nach den Vorgaben des Herstellers.
 
-                    </p>
+</p>
 
-                </div>
+</div>
 
-                <div>
+<div>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<h2 class="text-2xl font-semibold mb-4">
+Von der Garantie ausgeschlossen
+</h2>
 
-                        Herstellergarantie
+<p>
 
-                    </h2>
+Von einer Garantie oder Gewährleistung ausgeschlossen sind insbesondere Schäden, die entstehen durch:
 
-                    <p class="text-gray-700 leading-8">
+</p>
 
-                        Viele unserer Anhänger werden zusätzlich mit einer Herstellergarantie geliefert. Umfang und Dauer dieser Garantie richten sich ausschließlich nach den Garantiebedingungen des jeweiligen Herstellers.
+<ul class="list-disc ml-8 mt-4">
 
-                    </p>
+<li>Unsachgemäße Nutzung</li>
 
-                </div>
+<li>Normale Abnutzung</li>
 
-                <div>
+<li>Überladung des Anhängers</li>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<li>Unfälle oder äußere Einwirkungen</li>
 
-                        Garantiefall melden
+<li>Eigenmächtige Umbauten oder Reparaturen</li>
 
-                    </h2>
+<li>Fehlende Wartung</li>
 
-                    <p class="text-gray-700 leading-8">
+</ul>
 
-                        Bitte kontaktieren Sie unseren Kundenservice möglichst zeitnah und senden Sie uns eine Beschreibung des Mangels sowie aussagekräftige Fotos. Wir prüfen Ihr Anliegen schnellstmöglich und informieren Sie über das weitere Vorgehen.
+</div>
 
-                    </p>
+<div>
 
-                </div>
+<h2 class="text-2xl font-semibold mb-4">
+Schadensmeldung
+</h2>
 
-                <div>
+<p>
 
-                    <h2 class="text-2xl font-bold mb-4">
+Sollten Sie einen Mangel feststellen, setzen Sie sich bitte mit unserem Kundenservice in Verbindung.
 
-                        Von der Garantie ausgeschlossen
+Bitte beschreiben Sie den Mangel möglichst genau und fügen Sie, wenn möglich, Fotos des betroffenen Produkts bei.
 
-                    </h2>
+</p>
 
-                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+</div>
 
-                        <li>Normale Abnutzung durch Gebrauch.</li>
+<div>
 
-                        <li>Schäden durch unsachgemäße Nutzung.</li>
+<h2 class="text-2xl font-semibold mb-4">
+Bearbeitung
+</h2>
 
-                        <li>Eigenmächtige Veränderungen oder Umbauten.</li>
+<p>
 
-                        <li>Unfälle oder äußere Gewalteinwirkung.</li>
+Nach Prüfung Ihres Anliegens informieren wir Sie über das weitere Vorgehen.
 
-                        <li>Schäden durch mangelnde Wartung.</li>
+Je nach Einzelfall erfolgt eine Reparatur, ein Austausch oder eine andere geeignete Lösung entsprechend den gesetzlichen Bestimmungen.
 
-                    </ul>
+</p>
 
-                </div>
+</div>
 
-                <div>
+<div>
 
-                    <h2 class="text-2xl font-bold mb-4">
+<h2 class="text-2xl font-semibold mb-4">
+Kontakt
+</h2>
 
-                        Ersatzteile und Reparaturen
+<p>
 
-                    </h2>
+AC-Abschleppdienst
 
-                    <p class="text-gray-700 leading-8">
+<br>
 
-                        Wir unterstützen unsere Kunden bei der Beschaffung von Original-Ersatzteilen sowie bei Garantie- und Reparaturanfragen. Unser Team steht Ihnen beratend zur Seite.
+Francois Pierre
 
-                    </p>
+<br><br>
 
-                </div>
+Telefon:
++49 15782137847
 
-                <div>
+<br>
 
-                    <h2 class="text-2xl font-bold mb-4">
+E-Mail:
+info@ac-abschleppdienst.com
 
-                        Kundenservice
+</p>
 
-                    </h2>
+</div>
 
-                    <p class="text-gray-700 leading-8">
+</div>
 
-                        Unser Ziel ist eine schnelle und kundenorientierte Lösung. Bei Fragen zu Garantie oder Gewährleistung können Sie sich jederzeit an unseren Kundenservice wenden.
+</div>
 
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
 </section>
 
 @endsection

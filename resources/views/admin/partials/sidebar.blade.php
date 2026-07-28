@@ -39,6 +39,16 @@
                 📩 Angebote
 
             </a>
+
+            <a href="{{ route('admin.orders.index') }}"
+           class="block px-8 py-4 hover:bg-gray-800 transition">
+            🛒 Bestellungen
+        </a>
+
+        <a href="{{ route('admin.bank.edit') }}"
+           class="block px-8 py-4 hover:bg-gray-800 transition">
+            💳 Bankverbindung
+        </a>
     </nav>
 
 </aside>
